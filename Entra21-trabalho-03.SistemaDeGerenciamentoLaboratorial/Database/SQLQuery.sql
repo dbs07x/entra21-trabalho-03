@@ -7,3 +7,73 @@
 	preco DECIMAL(6,2));
 
 SELECT * FROM planos
+
+CREATE TABLE unidades(
+	id INTEGER PRIMARY KEY IDENTITY(1,1),
+	nome VARCHAR(30),
+	cep VARCHAR(8),
+	logradouro VARCHAR(30),
+	bairro VARCHAR(30),
+	cidade VARCHAR(30),
+	uf VARCHAR(2));
+
+	SELECT * FROM unidades
+
+CREATE TABLE medicos (
+	id INTEGER PRIMARY KEY IDENTITY(1,1),
+	nome VARCHAR(30),
+	data_nascimento DATETIME2,
+	cpf VARCHAR(11),
+	crm VARCHAR(6),
+	uf VARCHAR(2),
+	telefone VARCHAR(9),
+	email VARCHAR(30));
+
+	SELECT * FROM medicos
+
+	CREATE TABLE pacientes (
+	id INTEGER PRIMARY KEY IDENTITY(1,1),
+	nome VARCHAR(30),
+	data_nascimento DATETIME2,
+	cpf VARCHAR(11),
+	telefone VARCHAR(9),
+	email VARCHAR(30),
+
+	id_plano INTEGER,
+
+	FOREIGN KEY(id_plano) REFERENCES planos(id));
+
+	SELECT * FROM pacientes
+
+	CREATE TABLE agendamentos(
+	id INTEGER PRIMARY KEY IDENTITY(1,1),
+	preco_exame DECIMAL(7,2),
+	data_hora DATETIME2,
+
+	id_paciente INTEGER,
+	id_exame INTEGER, 
+
+	FOREIGN KEY(id_paciente) REFERENCES pacientes(id),
+	FOREIGN KEY(id_exame) REFERENCES exames(id));
+
+	
+	SELECT * FROM agendamentos
+
+	CREATE TABLE exames (
+	id INTEGER PRIMARY KEY IDENTITY(1,1),
+	nome VARCHAR(30),
+	preco DECIMAL(7,2),
+	instrucoes VARCHAR(50),
+
+	id_medico INTEGER,
+
+	FOREIGN KEY(id_medico) REFERENCES medicos(id));
+
+	
+	SELECT * FROM exames
+
+
+
+
+
+
