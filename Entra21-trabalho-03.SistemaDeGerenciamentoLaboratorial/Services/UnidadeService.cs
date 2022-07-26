@@ -69,7 +69,6 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Services
             comando.Parameters.AddWithValue("@ID", id);
 
             var tabelaEmMemoria = new DataTable();
-
             tabelaEmMemoria.Load(comando.ExecuteReader());
 
             var registro = tabelaEmMemoria.Rows[0];
@@ -88,13 +87,17 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Services
             return unidade;
         }
 
-        public List<Unidade> ObterTodos()
+        public List<Unidade> ObterTodosFiltrando(string nomePesquisa)
         {
             var conexao = new Conexao().Conectar();
 
             var comando = conexao.CreateCommand();
 
-            comando.CommandText = "SELECT id, nome, cep, logradouro, bairro, cidade, uf FROM unidades;";
+            comando.CommandText = @"SELECT 
+id, nome, cep, logradouro, bairro, cidade, uf 
+FROM unidades
+WHERE nome LIKE @NOME";
+            comando.Parameters.AddWithValue("@NOME", $"%{nomePesquisa}%");
 
             var tabelaEmMemoria = new DataTable();
 
@@ -107,6 +110,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Services
                 var registro = tabelaEmMemoria.Rows[i];
 
                 var unidade = new Unidade();
+                unidade.Id = Convert.ToInt32(registro["id"]);
                 unidade.Nome = registro["nome"].ToString();
                 unidade.Cep = registro["cep"].ToString();
                 unidade.Logradouro = registro["logradouro"].ToString();
