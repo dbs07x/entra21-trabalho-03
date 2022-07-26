@@ -52,9 +52,11 @@ CREATE TABLE medicos (
 
 	id_paciente INTEGER,
 	id_exame INTEGER, 
+	id_medico INTEGER,
 
 	FOREIGN KEY(id_paciente) REFERENCES pacientes(id),
-	FOREIGN KEY(id_exame) REFERENCES exames(id));
+	FOREIGN KEY(id_exame) REFERENCES exames(id),
+	FOREIGN KEY(id_medico) REFERENCES medicos(id));
 
 	
 	SELECT * FROM agendamentos
