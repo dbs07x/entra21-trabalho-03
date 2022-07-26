@@ -44,22 +44,7 @@ CREATE TABLE medicos (
 	FOREIGN KEY(id_plano) REFERENCES planos(id));
 
 	SELECT * FROM pacientes
-
-	CREATE TABLE agendamentos(
-	id INTEGER PRIMARY KEY IDENTITY(1,1),
-	preco_exame DECIMAL(7,2),
-	data_hora DATETIME2,
-
-	id_paciente INTEGER,
-	id_exame INTEGER, 
-	id_medico INTEGER,
-
-	FOREIGN KEY(id_paciente) REFERENCES pacientes(id),
-	FOREIGN KEY(id_exame) REFERENCES exames(id),
-	FOREIGN KEY(id_medico) REFERENCES medicos(id));
-
 	
-	SELECT * FROM agendamentos
 
 	CREATE TABLE exames (
 	id INTEGER PRIMARY KEY IDENTITY(1,1),
@@ -74,6 +59,21 @@ CREATE TABLE medicos (
 	
 	SELECT * FROM exames
 
+	CREATE TABLE agendamentos(
+	id INTEGER PRIMARY KEY IDENTITY(1,1),
+	preco_exame DECIMAL(7,2),
+	data_hora DATETIME2,
+
+	id_paciente INTEGER,
+	id_exame INTEGER, 
+	id_medico INTEGER,
+
+	FOREIGN KEY(id_paciente) REFERENCES pacientes(id),
+	FOREIGN KEY(id_exame) REFERENCES exames(id),
+	FOREIGN KEY(id_medico) REFERENCES medicos(id));
+
+
+	SELECT * FROM agendamentos
 
 
 

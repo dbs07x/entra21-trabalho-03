@@ -1,3 +1,5 @@
+using Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Unidades;
+
 namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new UnidadeListagemForm());
         }
     }
 }
