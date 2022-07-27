@@ -43,7 +43,7 @@
             // 
             // flowLayoutPanelPrincipal
             // 
-            this.flowLayoutPanelPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(95)))), ((int)(((byte)(85)))));
+            this.flowLayoutPanelPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(211)))), ((int)(((byte)(75)))));
             this.flowLayoutPanelPrincipal.Controls.Add(this.panelLogo);
             this.flowLayoutPanelPrincipal.Controls.Add(this.buttonDashboard);
             this.flowLayoutPanelPrincipal.Controls.Add(this.buttonUnidades);
@@ -75,6 +75,7 @@
             this.buttonDashboard.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonDashboard.ForeColor = System.Drawing.Color.Black;
             this.buttonDashboard.Image = global::Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Properties.Resources.dashboard;
+            this.buttonDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonDashboard.Location = new System.Drawing.Point(3, 113);
             this.buttonDashboard.Name = "buttonDashboard";
             this.buttonDashboard.Size = new System.Drawing.Size(326, 84);
@@ -94,6 +95,7 @@
             this.buttonUnidades.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonUnidades.ForeColor = System.Drawing.Color.Black;
             this.buttonUnidades.Image = global::Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Properties.Resources.hospital__1_;
+            this.buttonUnidades.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonUnidades.Location = new System.Drawing.Point(3, 203);
             this.buttonUnidades.Name = "buttonUnidades";
             this.buttonUnidades.Size = new System.Drawing.Size(326, 84);
@@ -112,12 +114,12 @@
             this.buttonMedicos.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonMedicos.ForeColor = System.Drawing.Color.Black;
             this.buttonMedicos.Image = global::Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Properties.Resources.medico;
+            this.buttonMedicos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonMedicos.Location = new System.Drawing.Point(3, 293);
             this.buttonMedicos.Name = "buttonMedicos";
-            this.buttonMedicos.Size = new System.Drawing.Size(326, 84);
+            this.buttonMedicos.Size = new System.Drawing.Size(326, 77);
             this.buttonMedicos.TabIndex = 2;
             this.buttonMedicos.Text = "Médicos";
-            this.buttonMedicos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonMedicos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonMedicos.UseVisualStyleBackColor = true;
             // 
@@ -130,7 +132,8 @@
             this.buttonPacientes.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonPacientes.ForeColor = System.Drawing.Color.Black;
             this.buttonPacientes.Image = global::Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Properties.Resources.hospital__1_;
-            this.buttonPacientes.Location = new System.Drawing.Point(3, 383);
+            this.buttonPacientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPacientes.Location = new System.Drawing.Point(3, 376);
             this.buttonPacientes.Name = "buttonPacientes";
             this.buttonPacientes.Size = new System.Drawing.Size(326, 84);
             this.buttonPacientes.TabIndex = 3;
@@ -148,7 +151,8 @@
             this.buttonPlanos.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonPlanos.ForeColor = System.Drawing.Color.Black;
             this.buttonPlanos.Image = global::Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Properties.Resources.hospital__1_;
-            this.buttonPlanos.Location = new System.Drawing.Point(3, 473);
+            this.buttonPlanos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPlanos.Location = new System.Drawing.Point(3, 466);
             this.buttonPlanos.Name = "buttonPlanos";
             this.buttonPlanos.Size = new System.Drawing.Size(326, 84);
             this.buttonPlanos.TabIndex = 4;
@@ -166,7 +170,8 @@
             this.buttonAgendamentos.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonAgendamentos.ForeColor = System.Drawing.Color.Black;
             this.buttonAgendamentos.Image = global::Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Properties.Resources.hospital__1_;
-            this.buttonAgendamentos.Location = new System.Drawing.Point(3, 563);
+            this.buttonAgendamentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAgendamentos.Location = new System.Drawing.Point(3, 556);
             this.buttonAgendamentos.Name = "buttonAgendamentos";
             this.buttonAgendamentos.Size = new System.Drawing.Size(326, 84);
             this.buttonAgendamentos.TabIndex = 5;
@@ -184,7 +189,8 @@
             this.buttonExames.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonExames.ForeColor = System.Drawing.Color.Black;
             this.buttonExames.Image = global::Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Properties.Resources.hospital__1_;
-            this.buttonExames.Location = new System.Drawing.Point(3, 653);
+            this.buttonExames.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonExames.Location = new System.Drawing.Point(3, 646);
             this.buttonExames.Name = "buttonExames";
             this.buttonExames.Size = new System.Drawing.Size(326, 84);
             this.buttonExames.TabIndex = 6;
