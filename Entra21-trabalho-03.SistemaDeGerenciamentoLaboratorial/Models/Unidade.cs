@@ -1,6 +1,6 @@
 ﻿namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Models
 {
-    internal class Unidade
+    public class Unidade
     {
         public int Id { get; set; }
         public string Nome { get; set; }

@@ -6,8 +6,8 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Services
     {
         void Cadastrar(Unidade unidade);
         void Editar(Unidade unidade);
-        List<Unidade> ObterTodos();
         void Apagar(int id);
         Unidade ObterPorId(int id);
+        public List<Unidade> ObterTodosFiltrando(string nomePesquisa);
     }
 }
