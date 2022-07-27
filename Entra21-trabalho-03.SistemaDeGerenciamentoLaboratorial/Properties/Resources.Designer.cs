@@ -73,9 +73,29 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap botao_de_menu_de_tres_linhas_horizontais {
+            get {
+                object obj = ResourceManager.GetObject("botao-de-menu-de-tres-linhas-horizontais", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap caixote_de_lixo {
             get {
                 object obj = ResourceManager.GetObject("caixote-de-lixo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap calendario {
+            get {
+                object obj = ResourceManager.GetObject("calendario", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,6 +163,16 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo_unimed_atualizada {
+            get {
+                object obj = ResourceManager.GetObject("logo_unimed_atualizada", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lupa__1_ {
             get {
                 object obj = ResourceManager.GetObject("lupa (1)", resourceCulture);
@@ -173,9 +203,39 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap prancheta {
+            get {
+                object obj = ResourceManager.GetObject("prancheta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap salve_ {
             get {
                 object obj = ResourceManager.GetObject("salve-", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sneezing {
+            get {
+                object obj = ResourceManager.GetObject("sneezing", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap teste_de_sangue {
+            get {
+                object obj = ResourceManager.GetObject("teste-de-sangue", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

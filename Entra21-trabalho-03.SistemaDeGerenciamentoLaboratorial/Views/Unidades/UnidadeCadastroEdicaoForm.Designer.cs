@@ -312,6 +312,7 @@
             this.Controls.Add(this.textBoxBairro);
             this.Controls.Add(this.textBoxLogradouro);
             this.Name = "UnidadeCadastroEdicaoForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro/Edição Unidades";
             this.ResumeLayout(false);
             this.PerformLayout();
