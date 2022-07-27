@@ -1,3 +1,4 @@
+using Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views;
 using Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Unidades;
 
 namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial
@@ -13,7 +14,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new UnidadeListagemForm());
+            Application.Run(new MenuForm());
         }
     }
 }
