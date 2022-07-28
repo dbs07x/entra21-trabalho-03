@@ -18,6 +18,20 @@
             base.Dispose(disposing);
         }
 
-        
+        private Button buttonSalvar;
+        private Button button1;
+        private Button buttonEditar;
+        private Button buttonApagar;
+        private Label labelNome;
+        private TextBox textBoxNome;
+        private MaskedTextBox maskedTextBoxTelefone;
+        private Label labelTelefone;
+        private Label labelEmail;
+        private TextBox textBox1;
+        private ComboBox comboBoxPlano;
+        private MaskedTextBox maskedTextBox1;
+        private Label labelCpf;
+        private DateTimePicker dateTimePicker1;
+        private Label labelDataNascimento;
     }
 }
