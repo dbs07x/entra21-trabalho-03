@@ -29,7 +29,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Pacientes
             // 
             // PacienteCadastroEdicaoForm
             // 
-            this.ClientSize = new System.Drawing.Size(483, 347);
+            this.ClientSize = new System.Drawing.Size(576, 384);
             this.Name = "PacienteCadastroEdicaoForm";
             this.ResumeLayout(false);
 

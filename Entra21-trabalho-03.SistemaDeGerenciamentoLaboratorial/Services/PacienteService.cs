@@ -99,8 +99,11 @@ p.data_nascimento AS 'data_nascimento',
 p.cpf AS 'cpf',
 p.id AS 'editora_id',
 p.telefone AS 'telefone',
-p.email AS 'email'
-FROM pacientes AS p";
+p.email AS 'email',
+pl.id_plano,
+FROM pacientes AS p
+    INNER JOIN pacientes AS p ON(p.id = pl.id)";
+            
             
             var tabelaEmMemoria = new DataTable();
             
