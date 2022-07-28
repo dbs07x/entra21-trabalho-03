@@ -11,6 +11,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Models
 
         public int Id { get; set; }
         public string Nome { get; set; }
+        public DateTime DataNascimento { get; set; }
         public string Abrangencia { get; set; }
         public string Acomodacao {get; set; }
         public Decimal Coparticipacao { get; set; } 
