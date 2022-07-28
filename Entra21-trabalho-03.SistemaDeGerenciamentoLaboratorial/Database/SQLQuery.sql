@@ -56,7 +56,6 @@ CREATE TABLE medicos (
 
 	FOREIGN KEY(id_medico) REFERENCES medicos(id));
 
-	
 	SELECT * FROM exames
 
 	CREATE TABLE agendamentos(
@@ -72,10 +71,4 @@ CREATE TABLE medicos (
 	FOREIGN KEY(id_exame) REFERENCES exames(id),
 	FOREIGN KEY(id_unidade) REFERENCES unidades(id));
 
-
 	SELECT * FROM agendamentos
-
-
-
-
-

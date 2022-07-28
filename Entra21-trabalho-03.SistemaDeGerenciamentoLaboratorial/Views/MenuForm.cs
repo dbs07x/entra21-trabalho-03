@@ -1,4 +1,5 @@
-﻿using Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Unidades;
+﻿using Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Agendamentos;
+using Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Unidades;
 
 namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views
 {
@@ -84,6 +85,13 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views
         private void pictureBoxMenu_Click(object sender, EventArgs e)
         {
             timerSidebar.Start();
+        }
+
+        private void buttonAgendamentos_Click(object sender, EventArgs e)
+        {
+            BotaoAtivo(buttonAgendamentos);
+            var agendamentoForm = new AgendamentoListagemForm();
+            MostrarForm(agendamentoForm);
         }
     }
 }

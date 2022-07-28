@@ -1,6 +1,6 @@
 ﻿namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Models
 {
-    internal class Agendamento
+    public class Agendamento
     {
         public int Id { get; set; }
         public decimal Preco { get; set; }

@@ -221,6 +221,7 @@
             this.buttonAgendamentos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAgendamentos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonAgendamentos.UseVisualStyleBackColor = true;
+            this.buttonAgendamentos.Click += new System.EventHandler(this.buttonAgendamentos_Click);
             // 
             // buttonExames
             // 

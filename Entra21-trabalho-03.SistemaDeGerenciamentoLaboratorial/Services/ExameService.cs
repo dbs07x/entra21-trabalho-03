@@ -108,6 +108,8 @@ FROM exames";
                 exame.Nome = registro["nome"].ToString();
                 exame.Preco = Convert.ToDouble(registro["preco"]);
                 exame.Instrucoes = registro["instrucoes"].ToString();
+
+                exame.Medico = new Medico();
                 exame.Medico.Id = Convert.ToInt32(registro["id_medico"]);
 
                 exames.Add(exame);

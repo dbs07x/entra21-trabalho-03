@@ -45,7 +45,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Services
 
             var comando = conexao.CreateCommand();
 
-            comando.CommandText = "UPDATE unidades SET nome = @NOME, cep = @CEP, logradouro = @LOGRADOURO, bairro = @BAIRRO, cidades = @CIDADE, uf = @UF WHERE id = @ID;";
+            comando.CommandText = "UPDATE unidades SET nome = @NOME, cep = @CEP, logradouro = @LOGRADOURO, bairro = @BAIRRO, cidade = @CIDADE, uf = @UF WHERE id = @ID;";
             comando.Parameters.AddWithValue("@NOME", unidade.Nome);
             comando.Parameters.AddWithValue("@CEP", unidade.Cep);
             comando.Parameters.AddWithValue("@LOGRADOURO", unidade.Logradouro);
@@ -75,6 +75,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Services
 
             var unidade = new Unidade();
 
+            unidade.Id = Convert.ToInt32(registro["id"]);
             unidade.Nome = registro["nome"].ToString();
             unidade.Cep = registro["cep"].ToString();
             unidade.Logradouro = registro["logradouro"].ToString();

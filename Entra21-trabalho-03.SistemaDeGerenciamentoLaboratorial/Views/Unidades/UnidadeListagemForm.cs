@@ -54,14 +54,14 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Unidades
         {
             if (dataGridView1.Rows.Count == 0)
             {
-                MessageBox.Show("Nenhum cliente cadastrado");
+                MessageBox.Show("Nenhuma unidade cadastrada");
 
                 return;
             }
 
             if (dataGridView1.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Selecione um cliente");
+                MessageBox.Show("Selecione uma unidade");
                 return;
             }
 
@@ -89,14 +89,14 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Unidades
         {
             if (dataGridView1.Rows.Count == 0)
             {
-                MessageBox.Show("Nenhum cliente cadastrado");
+                MessageBox.Show("Nenhuma unidade cadastrada");
 
                 return;
             }
 
             if (dataGridView1.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Nenhum cliente selecionado");
+                MessageBox.Show("Nenhuma unidade selecionada");
 
                 return;
             }
