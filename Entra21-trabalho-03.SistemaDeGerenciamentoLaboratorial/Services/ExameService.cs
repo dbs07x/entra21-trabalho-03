@@ -64,8 +64,16 @@ WHERE id = @ID";
 
             var comando = conexao.CreateCommand();
 
-            comando.CommandText = @"SELECT id, nome, preco, instrucoes, id_medico
-FROM exames WHERE id = @ID";
+            comando.CommandText = @"SELECT 
+e.id, 
+e.nome, 
+e.preco, 
+e.instrucoes, 
+e.id_medico,
+m.nome AS nome_medico
+FROM exames AS e
+INNER JOIN medicos AS m ON(e.id_medico = m.id)
+WHERE e.id = @ID";
             comando.Parameters.AddWithValue("@ID", id);
 
             var tabelaEmMemoria = new DataTable();
@@ -78,7 +86,10 @@ FROM exames WHERE id = @ID";
             exame.Nome = registro["nome"].ToString();
             exame.Preco = Convert.ToDouble(registro["preco"]);
             exame.Instrucoes = registro["instrucoes"].ToString();
+
+            exame.Medico = new Medico();
             exame.Medico.Id = Convert.ToInt32(registro["id_medico"]);
+            exame.Medico.Nome = registro["nome_medico"].ToString();
 
             conexao.Close();
 
@@ -105,6 +116,7 @@ FROM exames";
                 var registro = tabelaEmMemoria.Rows[i];
 
                 var exame = new Exame();
+                exame.Id = Convert.ToInt32(registro["id"]);
                 exame.Nome = registro["nome"].ToString();
                 exame.Preco = Convert.ToDouble(registro["preco"]);
                 exame.Instrucoes = registro["instrucoes"].ToString();

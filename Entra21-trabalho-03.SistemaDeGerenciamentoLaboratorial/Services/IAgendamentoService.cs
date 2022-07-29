@@ -8,6 +8,6 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Services
         void Editar(Agendamento agendamento);
         void Apagar(int id);
         Agendamento ObterPorId(int id);
-        List<Agendamento> ObterTodos();
+        List<Agendamento> ObterTodosFiltrando(string pacientePesquisa, string unidadePesquisa);
     }
 }

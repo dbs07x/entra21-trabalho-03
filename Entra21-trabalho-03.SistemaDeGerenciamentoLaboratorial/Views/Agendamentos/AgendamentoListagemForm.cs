@@ -1,5 +1,6 @@
 ﻿using Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Services;
 using System.Data.SqlClient;
+using System.Globalization;
 
 namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Agendamentos
 {
@@ -18,7 +19,17 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Agendamen
 
         private void PreencherDataGridView()
         {
-            var agendamentos = _agendamentoService.ObterTodos();
+            var pacientePesquisa = textBoxNomePaciente.Text.Trim();
+            var unidadePesquisa = textBoxUnidade.Text.Trim();
+
+            var agendamentos = _agendamentoService.ObterTodosFiltrando(pacientePesquisa, unidadePesquisa);
+
+            dataGridView1.Rows.Clear();
+
+            var cultura = new CultureInfo("pt-BR");
+            cultura.NumberFormat.NumberDecimalSeparator = ",";
+            cultura.NumberFormat.CurrencyGroupSeparator = ".";
+            cultura.NumberFormat.NumberDecimalDigits = 2;
 
             for (int i = 0; i < agendamentos.Count; i++)
             {
@@ -27,8 +38,8 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Agendamen
                 dataGridView1.Rows.Add(new object[]
                 {
                     agendamento.Id,
-                    agendamento.DataHora,
-                    agendamento.Preco,
+                    agendamento.DataHora.ToString("dd/mm/yyy HH:mm"),
+                    string.Format(cultura, "R$ {0:N}", agendamento.Preco),
                     agendamento.Paciente.Nome,
                     agendamento.Exame.Nome,
                     agendamento.Unidade.Nome,

@@ -31,6 +31,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Services
             comando.Parameters.AddWithValue("@DATAHORA", agendamento.DataHora);
             comando.Parameters.AddWithValue("@IDPACIENTE", agendamento.Paciente.Id);
             comando.Parameters.AddWithValue("@IDEXAME", agendamento.Exame.Id);
+            comando.Parameters.AddWithValue("@IDUNIDADE", agendamento.Unidade.Id);
 
             comando.ExecuteNonQuery();
 
@@ -50,7 +51,6 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Services
             comando.Parameters.AddWithValue("@DATAHORA", agendamento.DataHora);
             comando.Parameters.AddWithValue("@IDPACIENTE", agendamento.Paciente.Id);
             comando.Parameters.AddWithValue("@IDEXAME", agendamento.Exame.Id);
-            comando.Parameters.AddWithValue("@IDUNIDADE", agendamento.Unidade.Id);
 
             comando.ExecuteNonQuery();
 
@@ -90,19 +90,21 @@ INNER JOIN medicos AS m ON(e.id_medico = m.id);";
 
             var agendamento = new Agendamento();
 
+            agendamento.Id = Convert.ToInt32(registro["id"]);
             agendamento.Preco = Convert.ToDecimal(registro["preco_exame"]);
             agendamento.DataHora = Convert.ToDateTime(registro["data_hora"]);
 
             agendamento.Paciente = new Paciente();
             agendamento.Paciente.Id = Convert.ToInt32(registro["paciente_id"]);
             agendamento.Paciente.Nome = registro["nome_paciente"].ToString();
-            //agendamento.Paciente.Plano.Coparticipacao = registro["coparticipacao"];
 
             agendamento.Exame = new Exame();
             agendamento.Exame.Id = Convert.ToInt32(registro["exame_id"]);
             agendamento.Exame.Nome = registro["exame_nome"].ToString();
             agendamento.Exame.Preco = Convert.ToDouble(registro["exame_preco"]);
-            agendamento.Exame.Medico.Nome = Convert.ToInt32(registro["medico_nome"]).ToString();
+
+            agendamento.Exame.Medico = new Medico();
+            agendamento.Exame.Medico.Nome = registro["medico_nome"].ToString();
 
             agendamento.Unidade = new Unidade();
             agendamento.Unidade.Id = Convert.ToInt32(registro["unidade_id"]);
@@ -113,7 +115,7 @@ INNER JOIN medicos AS m ON(e.id_medico = m.id);";
             return agendamento;
         }
 
-        public List<Agendamento> ObterTodos()
+        public List<Agendamento> ObterTodosFiltrando(string pacientePesquisa, string unidadePesquisa)
         {
             var conexao = new Conexao().Conectar();
 
@@ -137,7 +139,10 @@ INNER JOIN pacientes AS p ON(a.id_paciente = p.id)
 INNER JOIN exames AS e ON(a.id_exame = e.id)
 INNER JOIN unidades AS u ON(a.id_unidade = u.id)
 INNER JOIN planos AS pla ON(p.id_plano = pla.id)
-INNER JOIN medicos AS m ON(e.id_medico = m.id);";
+INNER JOIN medicos AS m ON(e.id_medico = m.id)
+WHERE p.nome LIKE @PACIENTEPESQUISA AND u.nome LIKE @UNIDADEPESQUISA";
+            comando.Parameters.AddWithValue("@PACIENTEPESQUISA", $"%{pacientePesquisa}%");
+            comando.Parameters.AddWithValue("@UNIDADEPESQUISA", $"%{unidadePesquisa}%");
 
             var tabelaEmMemoria = new DataTable();
             tabelaEmMemoria.Load(comando.ExecuteReader());
@@ -150,19 +155,21 @@ INNER JOIN medicos AS m ON(e.id_medico = m.id);";
 
                 var agendamento = new Agendamento();
 
+                agendamento.Id = Convert.ToInt32(registro["id"]);
                 agendamento.Preco = Convert.ToDecimal(registro["preco_exame"]);
                 agendamento.DataHora = Convert.ToDateTime(registro["data_hora"]);
 
                 agendamento.Paciente = new Paciente();
                 agendamento.Paciente.Id = Convert.ToInt32(registro["paciente_id"]);
                 agendamento.Paciente.Nome = registro["nome_paciente"].ToString();
-                //agendamento.Paciente.Plano.Coparticipacao = registro["coparticipacao"];
 
                 agendamento.Exame = new Exame();
                 agendamento.Exame.Id = Convert.ToInt32(registro["exame_id"]);
                 agendamento.Exame.Nome = registro["exame_nome"].ToString();
                 agendamento.Exame.Preco = Convert.ToDouble(registro["exame_preco"]);
-                agendamento.Exame.Medico.Nome = Convert.ToInt32(registro["medico_nome"]).ToString();
+
+                agendamento.Exame.Medico = new Medico();
+                agendamento.Exame.Medico.Nome = registro["medico_nome"].ToString();
 
                 agendamento.Unidade = new Unidade();
                 agendamento.Unidade.Id = Convert.ToInt32(registro["unidade_id"]);

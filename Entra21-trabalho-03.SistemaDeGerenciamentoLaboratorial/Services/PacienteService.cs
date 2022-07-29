@@ -101,15 +101,14 @@ p.id AS 'editora_id',
 p.telefone AS 'telefone',
 p.email AS 'email',
 p.id_plano,
-pl.nome
+pl.nome,
+pl.coparticipacao AS 'coparticipacao'
 FROM pacientes AS p
 INNER JOIN planos AS pl ON(p.id_plano = pl.id)";
-            
             
             var tabelaEmMemoria = new DataTable();
             
             tabelaEmMemoria.Load(comando.ExecuteReader());
-
 
             var personagens = new List<Paciente>();
 
@@ -119,6 +118,10 @@ INNER JOIN planos AS pl ON(p.id_plano = pl.id)";
                 var personagem = new Paciente();
                 personagem.Id = Convert.ToInt32(registro["id"]);
                 personagem.Nome = registro["nome"].ToString();
+                personagem.Data_nascimento = Convert.ToDateTime(registro["data_nascimento"]);
+
+                personagem.Plano = new Plano();
+                personagem.Plano.Coparticipacao = Convert.ToDecimal(registro["coparticipacao"]);
 
                 personagens.Add(personagem);
             }

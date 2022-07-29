@@ -45,10 +45,13 @@
             this.labelMedico = new System.Windows.Forms.Label();
             this.labelPaciente = new System.Windows.Forms.Label();
             this.labelUnidade = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.labelObservacoes = new System.Windows.Forms.Label();
             this.labelPrecoLabel = new System.Windows.Forms.Label();
             this.labelPreco = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label7
@@ -73,7 +76,7 @@
             this.buttonCancelar.ForeColor = System.Drawing.Color.Black;
             this.buttonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancelar.Image")));
             this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCancelar.Location = new System.Drawing.Point(306, 529);
+            this.buttonCancelar.Location = new System.Drawing.Point(307, 357);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.buttonCancelar.Size = new System.Drawing.Size(215, 57);
@@ -91,7 +94,7 @@
             this.buttonSalvar.ForeColor = System.Drawing.Color.Black;
             this.buttonSalvar.Image = ((System.Drawing.Image)(resources.GetObject("buttonSalvar.Image")));
             this.buttonSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSalvar.Location = new System.Drawing.Point(12, 529);
+            this.buttonSalvar.Location = new System.Drawing.Point(25, 357);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.buttonSalvar.Size = new System.Drawing.Size(213, 57);
@@ -110,16 +113,18 @@
             // 
             // comboBoxUnidade
             // 
+            this.comboBoxUnidade.DisplayMember = "Nome";
             this.comboBoxUnidade.FormattingEnabled = true;
-            this.comboBoxUnidade.Location = new System.Drawing.Point(12, 260);
+            this.comboBoxUnidade.Location = new System.Drawing.Point(11, 266);
             this.comboBoxUnidade.Name = "comboBoxUnidade";
             this.comboBoxUnidade.Size = new System.Drawing.Size(506, 28);
             this.comboBoxUnidade.TabIndex = 32;
             // 
             // comboBoxPaciente
             // 
+            this.comboBoxPaciente.DisplayMember = "Nome";
             this.comboBoxPaciente.FormattingEnabled = true;
-            this.comboBoxPaciente.Location = new System.Drawing.Point(12, 205);
+            this.comboBoxPaciente.Location = new System.Drawing.Point(11, 205);
             this.comboBoxPaciente.Name = "comboBoxPaciente";
             this.comboBoxPaciente.Size = new System.Drawing.Size(506, 28);
             this.comboBoxPaciente.TabIndex = 33;
@@ -127,6 +132,7 @@
             // 
             // comboBoxExame
             // 
+            this.comboBoxExame.DisplayMember = "Nome";
             this.comboBoxExame.FormattingEnabled = true;
             this.comboBoxExame.Location = new System.Drawing.Point(12, 141);
             this.comboBoxExame.Name = "comboBoxExame";
@@ -136,6 +142,7 @@
             // 
             // textBoxMedico
             // 
+            this.textBoxMedico.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxMedico.Location = new System.Drawing.Point(268, 142);
             this.textBoxMedico.Name = "textBoxMedico";
             this.textBoxMedico.ReadOnly = true;
@@ -145,6 +152,7 @@
             // dateTimePickerHora
             // 
             this.dateTimePickerHora.AccessibleRole = System.Windows.Forms.AccessibleRole.Pane;
+            this.dateTimePickerHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePickerHora.CustomFormat = "HH:mm";
             this.dateTimePickerHora.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerHora.Location = new System.Drawing.Point(268, 84);
@@ -158,7 +166,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(63, 57);
+            this.label3.Location = new System.Drawing.Point(52, 57);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(19, 24);
             this.label3.TabIndex = 40;
@@ -176,6 +184,7 @@
             // 
             // labelHora
             // 
+            this.labelHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelHora.AutoSize = true;
             this.labelHora.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelHora.Location = new System.Drawing.Point(268, 57);
@@ -196,6 +205,7 @@
             // 
             // labelMedico
             // 
+            this.labelMedico.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelMedico.AutoSize = true;
             this.labelMedico.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelMedico.Location = new System.Drawing.Point(268, 118);
@@ -208,7 +218,7 @@
             // 
             this.labelPaciente.AutoSize = true;
             this.labelPaciente.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelPaciente.Location = new System.Drawing.Point(12, 181);
+            this.labelPaciente.Location = new System.Drawing.Point(11, 181);
             this.labelPaciente.Name = "labelPaciente";
             this.labelPaciente.Size = new System.Drawing.Size(73, 21);
             this.labelPaciente.TabIndex = 44;
@@ -218,36 +228,18 @@
             // 
             this.labelUnidade.AutoSize = true;
             this.labelUnidade.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelUnidade.Location = new System.Drawing.Point(11, 236);
+            this.labelUnidade.Location = new System.Drawing.Point(10, 242);
             this.labelUnidade.Name = "labelUnidade";
             this.labelUnidade.Size = new System.Drawing.Size(74, 21);
             this.labelUnidade.TabIndex = 45;
             this.labelUnidade.Text = "Unidade";
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox1.Location = new System.Drawing.Point(12, 315);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(506, 147);
-            this.richTextBox1.TabIndex = 46;
-            this.richTextBox1.Text = "";
-            // 
-            // labelObservacoes
-            // 
-            this.labelObservacoes.AutoSize = true;
-            this.labelObservacoes.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelObservacoes.Location = new System.Drawing.Point(12, 291);
-            this.labelObservacoes.Name = "labelObservacoes";
-            this.labelObservacoes.Size = new System.Drawing.Size(103, 21);
-            this.labelObservacoes.TabIndex = 47;
-            this.labelObservacoes.Text = "Observações";
-            // 
             // labelPrecoLabel
             // 
+            this.labelPrecoLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelPrecoLabel.AutoSize = true;
             this.labelPrecoLabel.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelPrecoLabel.Location = new System.Drawing.Point(72, 475);
+            this.labelPrecoLabel.Location = new System.Drawing.Point(79, 306);
             this.labelPrecoLabel.Name = "labelPrecoLabel";
             this.labelPrecoLabel.Size = new System.Drawing.Size(212, 28);
             this.labelPrecoLabel.TabIndex = 48;
@@ -255,24 +247,85 @@
             // 
             // labelPreco
             // 
+            this.labelPreco.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelPreco.AutoSize = true;
             this.labelPreco.Font = new System.Drawing.Font("Constantia", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelPreco.Location = new System.Drawing.Point(281, 471);
+            this.labelPreco.Location = new System.Drawing.Point(297, 306);
             this.labelPreco.Name = "labelPreco";
-            this.labelPreco.Size = new System.Drawing.Size(143, 35);
+            this.labelPreco.Size = new System.Drawing.Size(104, 35);
             this.labelPreco.TabIndex = 49;
-            this.labelPreco.Text = "R$ 1000,00";
+            this.labelPreco.Text = "R$ 0,00";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(314, 54);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(19, 24);
+            this.label1.TabIndex = 50;
+            this.label1.Text = "*";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(65, 114);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(19, 24);
+            this.label2.TabIndex = 51;
+            this.label2.Text = "*";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(329, 114);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(19, 24);
+            this.label4.TabIndex = 52;
+            this.label4.Text = "*";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(85, 172);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(19, 24);
+            this.label5.TabIndex = 53;
+            this.label5.Text = "*";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(85, 236);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(19, 24);
+            this.label6.TabIndex = 54;
+            this.label6.Text = "*";
             // 
             // AgendamentoCadastroEdicaoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
-            this.ClientSize = new System.Drawing.Size(533, 598);
+            this.ClientSize = new System.Drawing.Size(533, 426);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelPreco);
             this.Controls.Add(this.labelPrecoLabel);
-            this.Controls.Add(this.labelObservacoes);
-            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.labelUnidade);
             this.Controls.Add(this.labelPaciente);
             this.Controls.Add(this.labelMedico);
@@ -290,7 +343,7 @@
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.label7);
             this.Name = "AgendamentoCadastroEdicaoForm";
-            this.Text = "AgendamentoCadastroEdicaoForm";
+            this.Text = "Cadastro/Edição agendamentos";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -314,9 +367,12 @@
         private Label labelMedico;
         private Label labelPaciente;
         private Label labelUnidade;
-        private RichTextBox richTextBox1;
-        private Label labelObservacoes;
         private Label labelPrecoLabel;
         private Label labelPreco;
+        private Label label1;
+        private Label label2;
+        private Label label4;
+        private Label label5;
+        private Label label6;
     }
 }

@@ -48,7 +48,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Agendamen
             
             for (int i = 0; i < comboBoxPaciente.Items.Count; i++)
             {
-                var pacientePercorrido = comboBoxPaciente.Items[i] as Exame;
+                var pacientePercorrido = comboBoxPaciente.Items[i] as Paciente;
 
                 if (pacientePercorrido.Id == agendamento.Paciente.Id)
                 {
@@ -59,7 +59,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Agendamen
             
             for (int i = 0; i < comboBoxUnidade.Items.Count; i++)
             {
-                var unidadePercorrida = comboBoxUnidade.Items[i] as Exame;
+                var unidadePercorrida = comboBoxUnidade.Items[i] as Unidade;
 
                 if (unidadePercorrida.Id == agendamento.Unidade.Id)
                 {
@@ -73,10 +73,13 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Agendamen
         {
             var agendamento = new Agendamento();
             agendamento.DataHora = Convert.ToDateTime($"{dateTimePickerData.Value.Date.ToString("dd/MM/yyyy")} {dateTimePickerHora.Value.TimeOfDay}");
-            agendamento.Preco = Convert.ToDecimal(labelPreco.Text);
+            agendamento.Preco = Convert.ToDecimal(labelPreco.Text.Replace("R$ ", string.Empty));
             agendamento.Paciente = comboBoxPaciente.SelectedItem as Paciente;
             agendamento.Unidade = comboBoxUnidade.SelectedItem as Unidade;
             agendamento.Exame = comboBoxExame.SelectedItem as Exame;
+
+            if (ValidarInformacoes() == false)
+                return;
 
             if (_idParaEditar == -1)
             {
@@ -128,7 +131,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Agendamen
             for (int i = 0; i < unidades.Count; i++)
             {
                 var unidade = unidades[i];
-                comboBoxExame.Items.Add(unidade);
+                comboBoxUnidade.Items.Add(unidade);
             }
         }
 
@@ -141,8 +144,8 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Agendamen
         {
             var exameService = new ExameService();
             var exameSelecionado = comboBoxExame.SelectedItem as Exame;
-            //var medico = exameService.ObterPorId(exameSelecionado.Id);
-            //textBoxMedico.Text = medico.Nome;
+            var exame = exameService.ObterPorId(exameSelecionado.Id);
+            textBoxMedico.Text = exame.Medico.Nome;
 
             ValorExame = exameSelecionado.Preco;
 
@@ -152,7 +155,6 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Agendamen
         private void comboBoxPaciente_SelectedIndexChanged(object sender, EventArgs e)
         {
             var pacienteSelecionado = comboBoxPaciente.SelectedItem as Paciente;
-            pacienteSelecionado.Plano = new Plano();
             ValorCoparticipacao = pacienteSelecionado.Plano.Coparticipacao;
 
             CalcularPreco();
@@ -162,6 +164,39 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Agendamen
         {
             var valor = ValorExame * Convert.ToDouble(ValorCoparticipacao);
             labelPreco.Text = "R$ " + valor.ToString();
+        }
+
+        private bool ValidarInformacoes()
+        {
+            if (comboBoxExame.SelectedIndex == -1)
+            {
+                MessageBox.Show("Selecione um exame");
+                comboBoxExame.Focus();
+                return false;
+            }      
+            
+            if (comboBoxPaciente.SelectedIndex == -1)
+            {
+                MessageBox.Show("Selecione um paciente");
+                comboBoxPaciente.Focus();
+                return false;
+            }      
+            
+            if (comboBoxUnidade.SelectedIndex == -1)
+            {
+                MessageBox.Show("Selecione uma unidade");
+                comboBoxUnidade.Focus();
+                return false;
+            }
+
+            if (dateTimePickerHora.Value.Hour > 18 || dateTimePickerHora.Value.Hour < 6)
+            {
+                MessageBox.Show("Não é possível marcar uma consulta antes das 6h e depois das 18h");
+                dateTimePickerHora.Focus();
+                return false;
+            }
+
+            return true;
         }
     }
 }
