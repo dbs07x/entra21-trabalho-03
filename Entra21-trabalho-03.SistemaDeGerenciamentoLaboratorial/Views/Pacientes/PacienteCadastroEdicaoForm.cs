@@ -16,6 +16,8 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Pacientes
     {
 
         private readonly int _idParaEditar;
+        private readonly PacienteService _pacienteService;
+
         private DateTime dataNascimento;
 
         public PacienteCadastroEdicaoForm()
@@ -75,32 +77,35 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Pacientes
 
             }
 
+            var paciente = new Paciente();
            var nome = textBoxNome.Text.Trim();
+           var email = textBoxEmail.Text.Trim();
+            // var dataNascimento = dateTimePicker1
+            var cpf = maskedTextBox1.Text.Trim();
+            var telefone = maskedTextBox1.Text.Trim();
            var tipoPlano = comboBox1.SelectedItem as Plano;
 
-            var plano = new Plano();
+            var pacienteService = new PacienteService();
 
-         
-
-
-
-
-            if (_idParaEditar == -1) 
+            if (_idParaEditar == -1)
             {
-            
-            
+                pacienteService.Cadastrar(paciente);
+
+                MessageBox.Show("Paciente cadastrado com sucesso");
+            }
+            else 
+            {
+                paciente.Id = _idParaEditar;
+                pacienteService.Editar(paciente);
+
+                MessageBox.Show("Paciente alterado com sucesso");
+                Close();                     
             }
         }
 
-
-        private void buttonEditar_Click(object sender, EventArgs e)
+        private void buttonCancelar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void buttonApagar_Click(object sender, EventArgs e)
-        {
-
+            Close();
         }
     }
 }

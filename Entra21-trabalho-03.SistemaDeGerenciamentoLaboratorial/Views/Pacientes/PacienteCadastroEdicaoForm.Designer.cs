@@ -41,8 +41,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.labelTipoPlano = new System.Windows.Forms.Label();
             this.buttonCadastrar = new System.Windows.Forms.Button();
-            this.buttonEditar = new System.Windows.Forms.Button();
-            this.buttonApagar = new System.Windows.Forms.Button();
+            this.buttonCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelNome
@@ -154,33 +153,22 @@
             this.buttonCadastrar.UseVisualStyleBackColor = true;
             this.buttonCadastrar.Click += new System.EventHandler(this.buttonCadastrar_Click);
             // 
-            // buttonEditar
+            // buttonCancelar
             // 
-            this.buttonEditar.Location = new System.Drawing.Point(394, 98);
-            this.buttonEditar.Name = "buttonEditar";
-            this.buttonEditar.Size = new System.Drawing.Size(75, 23);
-            this.buttonEditar.TabIndex = 13;
-            this.buttonEditar.Text = "Editar";
-            this.buttonEditar.UseVisualStyleBackColor = true;
-            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
-            // 
-            // buttonApagar
-            // 
-            this.buttonApagar.Location = new System.Drawing.Point(408, 152);
-            this.buttonApagar.Name = "buttonApagar";
-            this.buttonApagar.Size = new System.Drawing.Size(75, 23);
-            this.buttonApagar.TabIndex = 14;
-            this.buttonApagar.Text = "Apagar";
-            this.buttonApagar.UseVisualStyleBackColor = true;
-            this.buttonApagar.Click += new System.EventHandler(this.buttonApagar_Click);
+            this.buttonCancelar.Location = new System.Drawing.Point(393, 85);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancelar.TabIndex = 13;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // PacienteCadastroEdicaoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(533, 450);
-            this.Controls.Add(this.buttonApagar);
-            this.Controls.Add(this.buttonEditar);
+            this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonCadastrar);
             this.Controls.Add(this.labelTipoPlano);
             this.Controls.Add(this.comboBox1);
@@ -217,7 +205,6 @@
         private ComboBox comboBox1;
         private Label labelTipoPlano;
         private Button buttonCadastrar;
-        private Button buttonEditar;
-        private Button buttonApagar;
+        private Button buttonCancelar;
     }
 }
