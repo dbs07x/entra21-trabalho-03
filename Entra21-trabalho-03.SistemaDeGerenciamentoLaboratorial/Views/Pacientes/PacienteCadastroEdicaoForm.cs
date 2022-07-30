@@ -34,17 +34,19 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Pacientes
             _idParaEditar = paciente.Id;
 
             textBoxNome.Text = paciente.Nome;
+            textBoxEmail.Text = paciente.Email;
+            maskedTextBoxCpf.Text = paciente.Cpf;
+            maskedTextBoxTelefone.Text = paciente.Telefone;
+            dateTimePicker1.Value = paciente.Data_nascimento;
 
-            for (var i = 0; i < comboBox1.Items.Count; i++) 
+            for (var i = 0; i < comboBoxPlano.Items.Count; i++) 
             {
+                var tipoPlanoPercorrido = comboBoxPlano.Items[i] as Plano;
 
-                var tipoPacientePercorrido = comboBox1.Items[i] as Paciente;
-
-                if (tipoPacientePercorrido.Id == paciente.Id) 
+                if (tipoPlanoPercorrido.Id == paciente.Plano.Id) 
                 {
-
-                    comboBox1.SelectedItem = tipoPacientePercorrido;
-                
+                    comboBoxPlano.SelectedItem = tipoPlanoPercorrido;
+                    break;
                 }
             }
         }
@@ -58,7 +60,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Pacientes
             {
 
                 var plano = planos[i];
-                comboBox1.Items.Add(plano);
+                comboBoxPlano.Items.Add(plano);
             
             }
         }
@@ -70,7 +72,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Pacientes
 
         private void buttonCadastrar_Click(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedIndex == -1) 
+            if (comboBoxPlano.SelectedIndex == -1) 
             {
                 MessageBox.Show("Selecione um plano");
                 return;
@@ -78,12 +80,12 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Pacientes
             }
 
             var paciente = new Paciente();
-           var nome = textBoxNome.Text.Trim();
-           var email = textBoxEmail.Text.Trim();
-            // var dataNascimento = dateTimePicker1
-            var cpf = maskedTextBox1.Text.Trim();
-            var telefone = maskedTextBox1.Text.Trim();
-           var tipoPlano = comboBox1.SelectedItem as Plano;
+            paciente.Nome = textBoxNome.Text.Trim();
+            paciente.Email = textBoxEmail.Text.Trim();
+            paciente.Data_nascimento = dateTimePicker1.Value;
+            paciente.Cpf = maskedTextBoxCpf.Text.Trim().Replace(",", string.Empty).Replace("-", string.Empty);
+            paciente.Telefone = maskedTextBoxTelefone.Text.Trim().Replace("(", string.Empty).Replace(")", string.Empty).Replace("-", string.Empty).Replace(" ", string.Empty);
+            paciente.Plano = comboBoxPlano.SelectedItem as Plano;
 
             var pacienteService = new PacienteService();
 

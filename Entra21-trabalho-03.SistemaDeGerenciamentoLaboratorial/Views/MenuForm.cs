@@ -1,4 +1,6 @@
 ﻿using Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Agendamentos;
+using Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Pacientes;
+using Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Planos;
 using Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Unidades;
 
 namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views
@@ -92,6 +94,20 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views
             BotaoAtivo(buttonAgendamentos);
             var agendamentoForm = new AgendamentoListagemForm();
             MostrarForm(agendamentoForm);
+        }
+
+        private void buttonPacientes_Click(object sender, EventArgs e)
+        {
+            BotaoAtivo(buttonPacientes);
+            var pacienteForm = new PacienteListagemForm();
+            MostrarForm(pacienteForm);
+        }
+
+        private void buttonPlanos_Click(object sender, EventArgs e)
+        {
+            BotaoAtivo(buttonPlanos);
+            var planoForm = new PlanoListagemForm();
+            MostrarForm(planoForm);
         }
     }
 }

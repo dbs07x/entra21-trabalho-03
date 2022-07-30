@@ -181,6 +181,7 @@
             this.buttonPacientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonPacientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonPacientes.UseVisualStyleBackColor = true;
+            this.buttonPacientes.Click += new System.EventHandler(this.buttonPacientes_Click);
             // 
             // buttonPlanos
             // 
@@ -201,6 +202,7 @@
             this.buttonPlanos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonPlanos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonPlanos.UseVisualStyleBackColor = true;
+            this.buttonPlanos.Click += new System.EventHandler(this.buttonPlanos_Click);
             // 
             // buttonAgendamentos
             // 

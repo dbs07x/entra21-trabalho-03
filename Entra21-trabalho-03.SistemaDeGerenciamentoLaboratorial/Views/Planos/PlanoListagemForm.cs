@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,6 +32,11 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Planos
 
             dataGridView1.Rows.Clear();
 
+            var cultura = new CultureInfo("pt-BR");
+            cultura.NumberFormat.NumberDecimalSeparator = ",";
+            cultura.NumberFormat.CurrencyGroupSeparator = ".";
+            cultura.NumberFormat.NumberDecimalDigits = 2;
+
             for (var i = 0; i < planos.Count; i++)
             {
                 var plano = planos[i];
@@ -38,10 +44,11 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Planos
                 dataGridView1.Rows.Add(new object[]
                    {
                    plano.Id,
+                   plano.Nome,
                    plano.Abrangencia,
                    plano.Acomodacao,
-                   plano.Coparticipacao,
-                   plano.Preco
+                   plano.Coparticipacao * 100 + "%",
+                   string.Format(cultura, "R$ {0:N}", plano.Preco)                   
                    });
             }
         }
@@ -67,15 +74,22 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Planos
             }
             else
             {
-                var linhaSelecionada = dataGridView1.SelectedRows[0];
+                try
+                {
+                    var linhaSelecionada = dataGridView1.SelectedRows[0];
 
-                var id = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+                    var id = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
 
-                _planoService.Apagar(id);
+                    _planoService.Apagar(id);
 
-                PreencherDataGridViewComPlanos();
+                    PreencherDataGridViewComPlanos();
 
-                MessageBox.Show("Plano removido com sucesso", "Aviso", MessageBoxButtons.OK);
+                    MessageBox.Show("Plano removido com sucesso", "Aviso", MessageBoxButtons.OK);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Não foi possível apagar o plano, provavelmente pois um paciente está o utilizando");
+                }
 
             
             }
@@ -93,7 +107,6 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Planos
             var id = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
 
             var plano = _planoService.ObterPorId(id);
-
             var planoCadastroForm = new PlanoCadastroEdicaoForm(plano);
 
             planoCadastroForm.ShowDialog();

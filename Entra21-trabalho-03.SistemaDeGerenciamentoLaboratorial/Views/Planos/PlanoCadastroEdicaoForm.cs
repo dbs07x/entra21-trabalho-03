@@ -23,14 +23,14 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Planos
             _idParaEditar = -1;
         }
 
-        public PlanoCadastroEdicaoForm(Plano plano) : this() 
+        public PlanoCadastroEdicaoForm(Plano plano) : this()
         {
             _idParaEditar = plano.Id;
             textBoxAbrangencia.Text = plano.Abrangencia;
             textBoxAcomodacao.Text = plano.Acomodacao;
             textBoxNome.Text = plano.Nome;
             textBoxPreco.Text = plano.Preco.ToString();
-            textBoxCoparticipacao.Text = plano.Coparticipacao.ToString();
+            textBoxCoparticipacao.Text = (plano.Coparticipacao * 100).ToString();
 
         }
 
@@ -67,10 +67,11 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Planos
                 Close();
 
             }
-    }
+        }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             Close();
         }
     }
+}

@@ -23,15 +23,14 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Services
         {
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();
-            comando.CommandText = "INSERT INTO planos (id, nome, abrangencia, acomodacao, coparticipacao," +
+            comando.CommandText = "INSERT INTO planos (nome, abrangencia, acomodacao, coparticipacao," +
                 " preco ) " +
-                "VALUES (@ID, @NOME, @ABRANGENCIA, @ACOMODACAO, @COPARTICIPACAO ,@PRECO);";
+                "VALUES (@NOME, @ABRANGENCIA, @ACOMODACAO, @COPARTICIPACAO ,@PRECO);";
 
-            comando.Parameters.AddWithValue("@ID", plano.Id);
             comando.Parameters.AddWithValue("@NOME", plano.Nome);
             comando.Parameters.AddWithValue("@ABRANGENCIA", plano.Abrangencia);
             comando.Parameters.AddWithValue("@ACOMODACAO", plano.Acomodacao);
-            comando.Parameters.AddWithValue("@COPARTICIPACAO", plano.Coparticipacao);
+            comando.Parameters.AddWithValue("@COPARTICIPACAO", plano.Coparticipacao / 100);
             comando.Parameters.AddWithValue("@PRECO", plano.Preco);
 
 
@@ -99,6 +98,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Services
 p.id AS 'id',
 p.nome AS 'nome',
 p.acomodacao AS 'acomodacao',
+p.abrangencia AS 'abrangencia',
 p.coparticipacao AS 'coparticipacao',
 p.preco AS 'preco'
 FROM planos AS p"; 
@@ -116,6 +116,10 @@ FROM planos AS p";
                 var plano = new Plano();
                 plano.Id = Convert.ToInt32(registro["id"]);
                 plano.Nome = registro["nome"].ToString();
+                plano.Abrangencia = registro["abrangencia"].ToString();
+                plano.Acomodacao = registro["acomodacao"].ToString();
+                plano.Preco = Convert.ToDecimal(registro["preco"]);
+                plano.Coparticipacao = Convert.ToDecimal(registro["coparticipacao"]);
 
                 planos.Add(plano);
             }
