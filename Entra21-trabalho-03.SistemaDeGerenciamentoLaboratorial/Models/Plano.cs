@@ -17,7 +17,5 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Models
         public Decimal Coparticipacao { get; set; } 
         public Decimal Preco {get; set; }
 
-
-
     }
 }

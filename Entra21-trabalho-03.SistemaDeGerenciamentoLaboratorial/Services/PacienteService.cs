@@ -37,7 +37,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Services
             comando.Parameters.AddWithValue("@EMAIL", paciente.Email);
 
             comando.ExecuteNonQuery();
-
+    
             comando.Connection.Close();
         }
 

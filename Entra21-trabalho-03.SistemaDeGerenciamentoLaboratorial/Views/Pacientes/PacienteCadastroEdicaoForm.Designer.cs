@@ -145,7 +145,7 @@
             // 
             // buttonCadastrar
             // 
-            this.buttonCadastrar.Location = new System.Drawing.Point(380, 43);
+            this.buttonCadastrar.Location = new System.Drawing.Point(275, 397);
             this.buttonCadastrar.Name = "buttonCadastrar";
             this.buttonCadastrar.Size = new System.Drawing.Size(75, 23);
             this.buttonCadastrar.TabIndex = 12;
@@ -155,7 +155,7 @@
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(393, 85);
+            this.buttonCancelar.Location = new System.Drawing.Point(367, 397);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
             this.buttonCancelar.TabIndex = 13;
