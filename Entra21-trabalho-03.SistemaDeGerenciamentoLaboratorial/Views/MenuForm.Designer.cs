@@ -254,7 +254,7 @@
             // 
             // timerSidebar
             // 
-            this.timerSidebar.Interval = 10;
+            this.timerSidebar.Interval = 5;
             this.timerSidebar.Tick += new System.EventHandler(this.timerSidebar_Tick);
             // 
             // MenuForm
@@ -265,7 +265,7 @@
             this.Controls.Add(this.panelForm);
             this.Controls.Add(this.flowLayoutPanelPrincipal);
             this.Name = "MenuForm";
-            this.Text = "MenuForm";
+            this.Text = "Sistema de gerenciamento laboratorial";
             this.flowLayoutPanelPrincipal.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenu)).EndInit();
