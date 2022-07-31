@@ -114,7 +114,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Agendamen
         private void PreencherComBoxExame()
         {
             var exameService = new ExameService();
-            var exames = exameService.ObterTodos();
+            var exames = exameService.ObterTodosFiltrando("");
 
             for (int i = 0; i < exames.Count; i++)
             {
