@@ -44,14 +44,14 @@ VALUES (@NOME, @PRECO, @INSTRUCOES, @ID_MEDICO);";
 
             var comando = conexao.CreateCommand();
 
-            comando.CommandText = @"UPDATE exames
-SET nome = @NOME, preco = @PRECO, instrucoes = @INSTRUCOES, id_medico = @ID_MEDICO
-WHERE id = @ID";
+            comando.CommandText = @"UPDATE exames 
+SET nome = @NOME, preco = @PRECO, instrucoes = @INSTRUCOES, id_medico = @ID_MEDICO 
+WHERE id = @ID;";
+            comando.Parameters.AddWithValue("@ID", exame.Id);
             comando.Parameters.AddWithValue("@NOME", exame.Nome);
             comando.Parameters.AddWithValue("@PRECO", exame.Preco);
             comando.Parameters.AddWithValue("@INSTRUCOES", exame.Instrucoes);
             comando.Parameters.AddWithValue("@ID_MEDICO", exame.Medico.Id);
-            comando.Parameters.AddWithValue("@ID", exame.Id);
 
             comando.ExecuteNonQuery();
 
@@ -72,9 +72,7 @@ e.instrucoes,
 e.id_medico,
 m.nome AS nome_medico
 FROM exames AS e
-INNER JOIN medicos AS m ON(e.id_medico = m.id)
-WHERE e.id = @ID";
-            comando.Parameters.AddWithValue("@ID", id);
+INNER JOIN medicos AS m ON(e.id_medico = m.id);";
 
             var tabelaEmMemoria = new DataTable();
             tabelaEmMemoria.Load(comando.ExecuteReader());
@@ -83,6 +81,7 @@ WHERE e.id = @ID";
 
             var exame = new Exame();
 
+            exame.Id = Convert.ToInt32(registro["id"]);
             exame.Nome = registro["nome"].ToString();
             exame.Preco = Convert.ToDouble(registro["preco"]);
             exame.Instrucoes = registro["instrucoes"].ToString();
@@ -111,8 +110,8 @@ e.id_medico,
 m.nome AS nome_medico
 FROM exames AS e
 INNER JOIN medicos AS m ON(e.id_medico = m.id)
-WHERE m.id LIKE @MEDICOPESQUISA";
-            comando.Parameters.AddWithValue("@MEDICOPESQUISA", $"%{examePesquisa}%");
+WHERE e.nome LIKE @EXAMEPESQUISA";
+            comando.Parameters.AddWithValue("@EXAMEPESQUISA", $"%{examePesquisa}%");
 
             var tabelaEmMemoria = new DataTable();
             tabelaEmMemoria.Load(comando.ExecuteReader());
