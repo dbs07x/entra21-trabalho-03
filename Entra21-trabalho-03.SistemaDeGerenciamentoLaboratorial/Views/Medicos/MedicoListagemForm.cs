@@ -42,7 +42,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Medicos
                     medico.Id,
                     medico.Nome,
                     medico.DataNascimento,
-                    medico.Cpf.Substring(0, 3) + "." + medico.Cpf.Substring(2, 3) + "." + medico.Cpf.Substring(5, 3) + "-" + medico.Cpf.Substring(8, 2),
+                    medico.Cpf.Substring(0, 3) + "." + medico.Cpf.Substring(3, 3) + "." + medico.Cpf.Substring(6, 3) + "-" + medico.Cpf.Substring(9, 2),
                     medico.Crm,
                     medico.Uf,
                     medico.Telefone.Substring(0, 0) + "(" + medico.Telefone.Substring(0, 2) + ")" + medico.Telefone.Substring(2,1) + " " + medico.Telefone.Substring(3, 4) + "-" + medico.Telefone.Substring(7, 4),
