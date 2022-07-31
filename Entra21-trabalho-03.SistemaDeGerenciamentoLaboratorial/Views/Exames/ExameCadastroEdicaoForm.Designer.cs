@@ -117,13 +117,14 @@
             this.buttonSalvar.Image = ((System.Drawing.Image)(resources.GetObject("buttonSalvar.Image")));
             this.buttonSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSalvar.Location = new System.Drawing.Point(11, 227);
-            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
             this.buttonSalvar.Size = new System.Drawing.Size(170, 46);
             this.buttonSalvar.TabIndex = 26;
             this.buttonSalvar.Text = "SALVAR";
             this.buttonSalvar.UseVisualStyleBackColor = false;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
             // buttonCancelar
             // 
@@ -142,6 +143,7 @@
             this.buttonCancelar.TabIndex = 28;
             this.buttonCancelar.Text = "CANCELAR";
             this.buttonCancelar.UseVisualStyleBackColor = false;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // labelTitulo
             // 

@@ -35,12 +35,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.buttonPesquisar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.ColumnMedico = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnInstrucoes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnInstrucoes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMedico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBoxNome = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -53,12 +53,13 @@
             this.buttonCadastrar.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonCadastrar.ForeColor = System.Drawing.Color.White;
             this.buttonCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCadastrar.Image")));
-            this.buttonCadastrar.Location = new System.Drawing.Point(486, 11);
+            this.buttonCadastrar.Location = new System.Drawing.Point(558, 11);
             this.buttonCadastrar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCadastrar.Name = "buttonCadastrar";
             this.buttonCadastrar.Size = new System.Drawing.Size(99, 102);
             this.buttonCadastrar.TabIndex = 5;
             this.buttonCadastrar.UseVisualStyleBackColor = false;
+            this.buttonCadastrar.Click += new System.EventHandler(this.buttonCadastrar_Click);
             // 
             // buttonEditar
             // 
@@ -68,13 +69,14 @@
             this.buttonEditar.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonEditar.ForeColor = System.Drawing.Color.White;
             this.buttonEditar.Image = ((System.Drawing.Image)(resources.GetObject("buttonEditar.Image")));
-            this.buttonEditar.Location = new System.Drawing.Point(589, 11);
+            this.buttonEditar.Location = new System.Drawing.Point(661, 11);
             this.buttonEditar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonEditar.Name = "buttonEditar";
             this.buttonEditar.Size = new System.Drawing.Size(99, 102);
             this.buttonEditar.TabIndex = 6;
             this.buttonEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonEditar.UseVisualStyleBackColor = false;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // buttonApagar
             // 
@@ -84,12 +86,13 @@
             this.buttonApagar.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonApagar.ForeColor = System.Drawing.Color.White;
             this.buttonApagar.Image = ((System.Drawing.Image)(resources.GetObject("buttonApagar.Image")));
-            this.buttonApagar.Location = new System.Drawing.Point(692, 11);
+            this.buttonApagar.Location = new System.Drawing.Point(764, 11);
             this.buttonApagar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonApagar.Name = "buttonApagar";
             this.buttonApagar.Size = new System.Drawing.Size(99, 102);
             this.buttonApagar.TabIndex = 7;
             this.buttonApagar.UseVisualStyleBackColor = false;
+            this.buttonApagar.Click += new System.EventHandler(this.buttonApagar_Click);
             // 
             // label1
             // 
@@ -108,15 +111,17 @@
             // 
             // buttonPesquisar
             // 
+            this.buttonPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonPesquisar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(211)))), ((int)(((byte)(75)))));
             this.buttonPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("buttonPesquisar.Image")));
-            this.buttonPesquisar.Location = new System.Drawing.Point(358, 9);
+            this.buttonPesquisar.Location = new System.Drawing.Point(460, 11);
             this.buttonPesquisar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPesquisar.Name = "buttonPesquisar";
             this.buttonPesquisar.Size = new System.Drawing.Size(94, 70);
             this.buttonPesquisar.TabIndex = 11;
             this.buttonPesquisar.UseVisualStyleBackColor = false;
+            this.buttonPesquisar.Click += new System.EventHandler(this.buttonPesquisar_Click);
             // 
             // label3
             // 
@@ -130,36 +135,6 @@
             this.label3.Size = new System.Drawing.Size(49, 17);
             this.label3.TabIndex = 12;
             this.label3.Text = "Nome:";
-            // 
-            // ColumnMedico
-            // 
-            this.ColumnMedico.HeaderText = "Médico";
-            this.ColumnMedico.Name = "ColumnMedico";
-            this.ColumnMedico.ReadOnly = true;
-            // 
-            // ColumnInstrucoes
-            // 
-            this.ColumnInstrucoes.HeaderText = "Intruções";
-            this.ColumnInstrucoes.Name = "ColumnInstrucoes";
-            this.ColumnInstrucoes.ReadOnly = true;
-            // 
-            // ColumnPreco
-            // 
-            this.ColumnPreco.HeaderText = "Preço";
-            this.ColumnPreco.Name = "ColumnPreco";
-            this.ColumnPreco.ReadOnly = true;
-            // 
-            // ColumnNome
-            // 
-            this.ColumnNome.HeaderText = "Nome";
-            this.ColumnNome.Name = "ColumnNome";
-            this.ColumnNome.ReadOnly = true;
-            // 
-            // ColumnId
-            // 
-            this.ColumnId.HeaderText = "Id";
-            this.ColumnId.Name = "ColumnId";
-            this.ColumnId.ReadOnly = true;
             // 
             // dataGridView1
             // 
@@ -180,24 +155,69 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(779, 302);
+            this.dataGridView1.Size = new System.Drawing.Size(851, 302);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // ColumnId
+            // 
+            this.ColumnId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnId.FillWeight = 58.21589F;
+            this.ColumnId.HeaderText = "Id";
+            this.ColumnId.MinimumWidth = 20;
+            this.ColumnId.Name = "ColumnId";
+            this.ColumnId.ReadOnly = true;
+            // 
+            // ColumnNome
+            // 
+            this.ColumnNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnNome.FillWeight = 149.0237F;
+            this.ColumnNome.HeaderText = "Nome";
+            this.ColumnNome.MinimumWidth = 20;
+            this.ColumnNome.Name = "ColumnNome";
+            this.ColumnNome.ReadOnly = true;
+            // 
+            // ColumnPreco
+            // 
+            this.ColumnPreco.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnPreco.FillWeight = 79.76604F;
+            this.ColumnPreco.HeaderText = "Preço";
+            this.ColumnPreco.MinimumWidth = 10;
+            this.ColumnPreco.Name = "ColumnPreco";
+            this.ColumnPreco.ReadOnly = true;
+            // 
+            // ColumnInstrucoes
+            // 
+            this.ColumnInstrucoes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnInstrucoes.FillWeight = 112.9943F;
+            this.ColumnInstrucoes.HeaderText = "Intruções";
+            this.ColumnInstrucoes.MinimumWidth = 30;
+            this.ColumnInstrucoes.Name = "ColumnInstrucoes";
+            this.ColumnInstrucoes.ReadOnly = true;
+            // 
+            // ColumnMedico
+            // 
+            this.ColumnMedico.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnMedico.HeaderText = "Médico";
+            this.ColumnMedico.MinimumWidth = 20;
+            this.ColumnMedico.Name = "ColumnMedico";
+            this.ColumnMedico.ReadOnly = true;
             // 
             // textBoxNome
             // 
-            this.textBoxNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBoxNome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxNome.Location = new System.Drawing.Point(113, 28);
             this.textBoxNome.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(227, 23);
+            this.textBoxNome.Size = new System.Drawing.Size(330, 23);
             this.textBoxNome.TabIndex = 13;
             // 
             // ExameListagemForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(802, 457);
+            this.ClientSize = new System.Drawing.Size(874, 457);
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonPesquisar);
@@ -221,12 +241,12 @@
         private Label label1;
         private Button buttonPesquisar;
         private Label label3;
-        private DataGridViewTextBoxColumn ColumnMedico;
-        private DataGridViewTextBoxColumn ColumnInstrucoes;
-        private DataGridViewTextBoxColumn ColumnPreco;
-        private DataGridViewTextBoxColumn ColumnNome;
-        private DataGridViewTextBoxColumn ColumnId;
         private DataGridView dataGridView1;
         private TextBox textBoxNome;
+        private DataGridViewTextBoxColumn ColumnId;
+        private DataGridViewTextBoxColumn ColumnNome;
+        private DataGridViewTextBoxColumn ColumnPreco;
+        private DataGridViewTextBoxColumn ColumnInstrucoes;
+        private DataGridViewTextBoxColumn ColumnMedico;
     }
 }
