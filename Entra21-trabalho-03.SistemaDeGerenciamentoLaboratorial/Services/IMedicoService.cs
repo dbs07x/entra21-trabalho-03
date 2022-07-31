@@ -4,7 +4,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Services
 {
     internal interface IMedicoService
     {
-        List<Medico> ObterTodos();
+        List<Medico> ObterTodosFiltrando(string nomePesquisa);
         Medico ObterPorId(int id);
         void Cadastrar(Medico medico);
         void Editar(Medico medico);

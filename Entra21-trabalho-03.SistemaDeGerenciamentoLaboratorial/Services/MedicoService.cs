@@ -28,7 +28,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Services
 
             comando.CommandText = "INSERT INTO medicos (nome, data_nascimento, cpf, crm, uf, telefone, email) VALUES (@NOME, @DATA_NASCIMENTO, @CPF, @CRM, @UF, @TELEFONE, @EMAIL);";
             comando.Parameters.AddWithValue("@NOME", medico.Nome);
-            comando.Parameters.AddWithValue("@DATA_NASCIMENTO", medico.DataNascimento);
+            //comando.Parameters.AddWithValue("@DATA_NASCIMENTO", medico.DataNascimento);
             comando.Parameters.AddWithValue("@CPF", medico.Cpf);
             comando.Parameters.AddWithValue("@CRM", medico.Crm);
             comando.Parameters.AddWithValue("@UF", medico.Uf);
@@ -93,14 +93,16 @@ FROM medicos WHERE id = @ID";
             return medico;
         }
 
-        public List<Medico> ObterTodos()
+        public List<Medico> ObterTodosFiltrando(string nomePesquisa)
         {
             var conexao = new Conexao().Conectar();
 
             var comando = conexao.CreateCommand();
 
             comando.CommandText = @"SELECT id, nome, data_nascimento, cpf, crm, uf, telefone, email
-FROM medicos";
+FROM medicos
+WHERE nome LIKE @NOME";
+            comando.Parameters.AddWithValue("@NOME", $"%{nomePesquisa}%");
 
             var tabelaEmMemoria = new DataTable();
 
