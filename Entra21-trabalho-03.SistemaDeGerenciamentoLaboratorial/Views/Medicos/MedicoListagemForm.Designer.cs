@@ -56,7 +56,7 @@
             this.textBoxNome.Location = new System.Drawing.Point(112, 28);
             this.textBoxNome.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(264, 23);
+            this.textBoxNome.Size = new System.Drawing.Size(431, 23);
             this.textBoxNome.TabIndex = 20;
             // 
             // labelNome
@@ -78,7 +78,7 @@
             this.buttonPesquisar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(211)))), ((int)(((byte)(75)))));
             this.buttonPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("buttonPesquisar.Image")));
-            this.buttonPesquisar.Location = new System.Drawing.Point(380, 11);
+            this.buttonPesquisar.Location = new System.Drawing.Point(547, 11);
             this.buttonPesquisar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPesquisar.Name = "buttonPesquisar";
             this.buttonPesquisar.Size = new System.Drawing.Size(94, 70);
@@ -109,7 +109,7 @@
             this.buttonApagar.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonApagar.ForeColor = System.Drawing.Color.White;
             this.buttonApagar.Image = ((System.Drawing.Image)(resources.GetObject("buttonApagar.Image")));
-            this.buttonApagar.Location = new System.Drawing.Point(687, 11);
+            this.buttonApagar.Location = new System.Drawing.Point(854, 11);
             this.buttonApagar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonApagar.Name = "buttonApagar";
             this.buttonApagar.Size = new System.Drawing.Size(99, 102);
@@ -125,7 +125,7 @@
             this.buttonEditar.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonEditar.ForeColor = System.Drawing.Color.White;
             this.buttonEditar.Image = ((System.Drawing.Image)(resources.GetObject("buttonEditar.Image")));
-            this.buttonEditar.Location = new System.Drawing.Point(584, 11);
+            this.buttonEditar.Location = new System.Drawing.Point(751, 11);
             this.buttonEditar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonEditar.Name = "buttonEditar";
             this.buttonEditar.Size = new System.Drawing.Size(99, 102);
@@ -142,7 +142,7 @@
             this.buttonCadastrar.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonCadastrar.ForeColor = System.Drawing.Color.White;
             this.buttonCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCadastrar.Image")));
-            this.buttonCadastrar.Location = new System.Drawing.Point(481, 11);
+            this.buttonCadastrar.Location = new System.Drawing.Point(648, 11);
             this.buttonCadastrar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCadastrar.Name = "buttonCadastrar";
             this.buttonCadastrar.Size = new System.Drawing.Size(99, 102);
@@ -172,13 +172,13 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(774, 300);
+            this.dataGridView1.Size = new System.Drawing.Size(941, 300);
             this.dataGridView1.TabIndex = 21;
             // 
             // ColumnId
             // 
             this.ColumnId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColumnId.FillWeight = 40.60914F;
+            this.ColumnId.FillWeight = 41.91376F;
             this.ColumnId.HeaderText = "Id";
             this.ColumnId.MinimumWidth = 10;
             this.ColumnId.Name = "ColumnId";
@@ -187,7 +187,7 @@
             // ColumnNome
             // 
             this.ColumnNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColumnNome.FillWeight = 108.4844F;
+            this.ColumnNome.FillWeight = 111.9696F;
             this.ColumnNome.HeaderText = "Nome";
             this.ColumnNome.Name = "ColumnNome";
             this.ColumnNome.ReadOnly = true;
@@ -195,15 +195,16 @@
             // ColumnDataNascimento
             // 
             this.ColumnDataNascimento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColumnDataNascimento.FillWeight = 108.4844F;
-            this.ColumnDataNascimento.HeaderText = "DataNascimento";
+            this.ColumnDataNascimento.FillWeight = 162.4366F;
+            this.ColumnDataNascimento.HeaderText = "Data de Nascimento";
+            this.ColumnDataNascimento.MinimumWidth = 40;
             this.ColumnDataNascimento.Name = "ColumnDataNascimento";
             this.ColumnDataNascimento.ReadOnly = true;
             // 
             // ColumnCpf
             // 
             this.ColumnCpf.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColumnCpf.FillWeight = 108.4844F;
+            this.ColumnCpf.FillWeight = 111.9696F;
             this.ColumnCpf.HeaderText = "CPF";
             this.ColumnCpf.Name = "ColumnCpf";
             this.ColumnCpf.ReadOnly = true;
@@ -211,23 +212,25 @@
             // ColumnCrm
             // 
             this.ColumnCrm.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColumnCrm.FillWeight = 108.4844F;
+            this.ColumnCrm.FillWeight = 83.1884F;
             this.ColumnCrm.HeaderText = "CRM";
+            this.ColumnCrm.MinimumWidth = 20;
             this.ColumnCrm.Name = "ColumnCrm";
             this.ColumnCrm.ReadOnly = true;
             // 
             // ColumnUf
             // 
             this.ColumnUf.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColumnUf.FillWeight = 108.4844F;
+            this.ColumnUf.FillWeight = 64.58276F;
             this.ColumnUf.HeaderText = "UF";
+            this.ColumnUf.MinimumWidth = 15;
             this.ColumnUf.Name = "ColumnUf";
             this.ColumnUf.ReadOnly = true;
             // 
             // ColumnTelefone
             // 
             this.ColumnTelefone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColumnTelefone.FillWeight = 108.4844F;
+            this.ColumnTelefone.FillWeight = 111.9696F;
             this.ColumnTelefone.HeaderText = "Telefone";
             this.ColumnTelefone.Name = "ColumnTelefone";
             this.ColumnTelefone.ReadOnly = true;
@@ -235,7 +238,7 @@
             // ColumnEmail
             // 
             this.ColumnEmail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColumnEmail.FillWeight = 108.4844F;
+            this.ColumnEmail.FillWeight = 111.9696F;
             this.ColumnEmail.HeaderText = "Email";
             this.ColumnEmail.Name = "ColumnEmail";
             this.ColumnEmail.ReadOnly = true;
@@ -244,7 +247,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(796, 450);
+            this.ClientSize = new System.Drawing.Size(963, 450);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.labelNome);
