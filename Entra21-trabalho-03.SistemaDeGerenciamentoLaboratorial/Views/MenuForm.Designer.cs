@@ -40,6 +40,7 @@
             this.buttonPlanos = new System.Windows.Forms.Button();
             this.buttonAgendamentos = new System.Windows.Forms.Button();
             this.buttonExames = new System.Windows.Forms.Button();
+            this.buttonExames2 = new System.Windows.Forms.Button();
             this.panelForm = new System.Windows.Forms.Panel();
             this.timerSidebar = new System.Windows.Forms.Timer(this.components);
             this.flowLayoutPanelPrincipal.SuspendLayout();
@@ -59,13 +60,18 @@
             this.flowLayoutPanelPrincipal.Controls.Add(this.buttonPlanos);
             this.flowLayoutPanelPrincipal.Controls.Add(this.buttonAgendamentos);
             this.flowLayoutPanelPrincipal.Controls.Add(this.buttonExames);
+            this.flowLayoutPanelPrincipal.Controls.Add(this.buttonExames2);
             this.flowLayoutPanelPrincipal.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanelPrincipal.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanelPrincipal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanelPrincipal.MaximumSize = new System.Drawing.Size(279, 0);
             this.flowLayoutPanelPrincipal.MinimumSize = new System.Drawing.Size(92, 0);
             this.flowLayoutPanelPrincipal.Name = "flowLayoutPanelPrincipal";
+<<<<<<< HEAD
             this.flowLayoutPanelPrincipal.Size = new System.Drawing.Size(279, 562);
+=======
+            this.flowLayoutPanelPrincipal.Size = new System.Drawing.Size(279, 667);
+>>>>>>> 95d384d9a8db8ed9acdeeb21d4a5a0bfbee16fec
             this.flowLayoutPanelPrincipal.TabIndex = 0;
             // 
             // panelLogo
@@ -168,6 +174,7 @@
             this.buttonMedicos.Text = "       Médicos";
             this.buttonMedicos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonMedicos.UseVisualStyleBackColor = true;
+            this.buttonMedicos.Click += new System.EventHandler(this.buttonMedicos_Click);
             // 
             // buttonPacientes
             // 
@@ -257,30 +264,60 @@
             this.buttonExames.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonExames.UseVisualStyleBackColor = true;
             // 
+            // buttonExames2
+            // 
+            this.buttonExames2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonExames2.FlatAppearance.BorderSize = 0;
+            this.buttonExames2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(90)))));
+            this.buttonExames2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExames2.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonExames2.ForeColor = System.Drawing.Color.Black;
+            this.buttonExames2.Image = global::Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Properties.Resources.teste_de_sangue;
+            this.buttonExames2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonExames2.Location = new System.Drawing.Point(3, 465);
+            this.buttonExames2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonExames2.Name = "buttonExames2";
+            this.buttonExames2.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.buttonExames2.Size = new System.Drawing.Size(285, 63);
+            this.buttonExames2.TabIndex = 7;
+            this.buttonExames2.Text = "       Exames";
+            this.buttonExames2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonExames2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonExames2.UseVisualStyleBackColor = true;
+            this.buttonExames2.Click += new System.EventHandler(this.buttonExames2_Click);
+            // 
             // panelForm
             // 
             this.panelForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelForm.Location = new System.Drawing.Point(279, 0);
             this.panelForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelForm.Name = "panelForm";
+<<<<<<< HEAD
             this.panelForm.Size = new System.Drawing.Size(920, 562);
+=======
+            this.panelForm.Size = new System.Drawing.Size(1214, 667);
+>>>>>>> 95d384d9a8db8ed9acdeeb21d4a5a0bfbee16fec
             this.panelForm.TabIndex = 1;
             // 
             // timerSidebar
             // 
-            this.timerSidebar.Interval = 10;
+            this.timerSidebar.Interval = 5;
             this.timerSidebar.Tick += new System.EventHandler(this.timerSidebar_Tick);
             // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1199, 562);
+=======
+            this.ClientSize = new System.Drawing.Size(1493, 667);
+>>>>>>> 95d384d9a8db8ed9acdeeb21d4a5a0bfbee16fec
             this.Controls.Add(this.panelForm);
             this.Controls.Add(this.flowLayoutPanelPrincipal);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MenuForm";
-            this.Text = "MenuForm";
+            this.Text = "Sistema de gerenciamento laboratorial";
             this.flowLayoutPanelPrincipal.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenu)).EndInit();
@@ -304,5 +341,6 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBoxMenu;
         private System.Windows.Forms.Timer timerSidebar;
+        private Button buttonExames2;
     }
 }

@@ -30,7 +30,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Planos
             textBoxAcomodacao.Text = plano.Acomodacao;
             textBoxNome.Text = plano.Nome;
             textBoxPreco.Text = plano.Preco.ToString();
-            textBoxCoparticipacao.Text = plano.Coparticipacao.ToString();
+            textBoxCoparticipacao.Text = (plano.Coparticipacao * 100).ToString();
 
         }
 

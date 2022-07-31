@@ -214,7 +214,7 @@
             this.labelMediaIdade.AutoSize = true;
             this.labelMediaIdade.Font = new System.Drawing.Font("Segoe UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelMediaIdade.ForeColor = System.Drawing.Color.White;
-            this.labelMediaIdade.Location = new System.Drawing.Point(199, 113);
+            this.labelMediaIdade.Location = new System.Drawing.Point(203, 114);
             this.labelMediaIdade.Name = "labelMediaIdade";
             this.labelMediaIdade.Size = new System.Drawing.Size(50, 59);
             this.labelMediaIdade.TabIndex = 1;

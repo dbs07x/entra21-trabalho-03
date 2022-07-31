@@ -64,11 +64,11 @@ WHERE id = @ID";
 
             var comando = conexao.CreateCommand();
 
-            comando.CommandText = @"SELECT 
-e.id, 
-e.nome, 
-e.preco, 
-e.instrucoes, 
+            comando.CommandText = @"SELECT
+e.id,
+e.nome,
+e.preco,
+e.instrucoes,
 e.id_medico,
 m.nome AS nome_medico
 FROM exames AS e
@@ -96,17 +96,25 @@ WHERE e.id = @ID";
             return exame;
         }
 
-        public List<Exame> ObterTodos()
+        public List<Exame> ObterTodosFiltrando(string examePesquisa)
         {
             var conexao = new Conexao().Conectar();
 
             var comando = conexao.CreateCommand();
 
-            comando.CommandText = @"SELECT id, nome, preco, instrucoes, id_medico
-FROM exames";
+            comando.CommandText = @"SELECT
+e.id, 
+e.nome, 
+e.preco, 
+e.instrucoes, 
+e.id_medico,
+m.nome AS nome_medico
+FROM exames AS e
+INNER JOIN medicos AS m ON(e.id_medico = m.id)
+WHERE m.id LIKE @MEDICOPESQUISA";
+            comando.Parameters.AddWithValue("@MEDICOPESQUISA", $"%{examePesquisa}%");
 
             var tabelaEmMemoria = new DataTable();
-
             tabelaEmMemoria.Load(comando.ExecuteReader());
 
             var exames = new List<Exame>();
@@ -116,6 +124,7 @@ FROM exames";
                 var registro = tabelaEmMemoria.Rows[i];
 
                 var exame = new Exame();
+
                 exame.Id = Convert.ToInt32(registro["id"]);
                 exame.Nome = registro["nome"].ToString();
                 exame.Preco = Convert.ToDouble(registro["preco"]);

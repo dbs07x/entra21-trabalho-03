@@ -29,9 +29,10 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Pacientes
 
                 dataGridView1.Rows.Add(new object[]
                 {
+                    paciente.Id,
                     paciente.Nome,
-                    paciente.Data_nascimento,
-                    paciente.Cpf,
+                    paciente.Data_nascimento.ToString("dd/MM/yyyy"),
+                    paciente.Cpf.Substring(0, 3) + "." + paciente.Cpf.Substring(2, 3) + "." + paciente.Cpf.Substring(4, 3) + "-" + paciente.Cpf.Substring(7, 2),
                     paciente.Telefone,
                     paciente.Email
                 });
@@ -88,15 +89,22 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Pacientes
             }
             else
             {
-                var linhaSelecionada = dataGridView1.SelectedRows[0];
+                try
+                {
+                    var linhaSelecionada = dataGridView1.SelectedRows[0];
 
-                var id = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+                    var id = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
 
-                _pacienteService.Apagar(id);
+                    _pacienteService.Apagar(id);
 
-                PreencherDataGridViewComPacientes();
+                    PreencherDataGridViewComPacientes();
 
-                MessageBox.Show("Paciente removido com sucesso!", "Aviso", MessageBoxButtons.OK);
+                    MessageBox.Show("Paciente removido com sucesso!", "Aviso", MessageBoxButtons.OK);
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Não foi possível apagar o registro, provavelmente porque está sendo usado em um agendamento");
+                }
             }
         }
     }

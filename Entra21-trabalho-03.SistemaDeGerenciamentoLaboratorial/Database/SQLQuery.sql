@@ -36,15 +36,15 @@ CREATE TABLE medicos (
 	nome VARCHAR(30),
 	data_nascimento DATETIME2,
 	cpf VARCHAR(11),
-	telefone VARCHAR(9),
+	telefone VARCHAR(11),
 	email VARCHAR(30),
 
 	id_plano INTEGER,
 
 	FOREIGN KEY(id_plano) REFERENCES planos(id));
 
+
 	SELECT * FROM pacientes
-	
 
 	CREATE TABLE exames (
 	id INTEGER PRIMARY KEY IDENTITY(1,1),

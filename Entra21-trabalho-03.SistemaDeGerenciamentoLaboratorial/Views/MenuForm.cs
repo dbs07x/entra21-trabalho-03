@@ -1,4 +1,9 @@
 ﻿using Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Agendamentos;
+<<<<<<< HEAD
+=======
+using Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Exames;
+using Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Medicos;
+>>>>>>> 95d384d9a8db8ed9acdeeb21d4a5a0bfbee16fec
 using Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Pacientes;
 using Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Planos;
 using Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Unidades;
@@ -95,6 +100,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views
             MostrarForm(agendamentoForm);
         }
 
+<<<<<<< HEAD
         private void buttonPlanos_Click(object sender, EventArgs e)
         {
             BotaoAtivo(buttonPlanos);
@@ -107,6 +113,34 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views
             BotaoAtivo(buttonPlanos);
             var pacientesForm = new PacienteListagemForm();
             MostrarForm(pacientesForm);
+=======
+        private void buttonPacientes_Click(object sender, EventArgs e)
+        {
+            BotaoAtivo(buttonPacientes);
+            var pacienteForm = new PacienteListagemForm();
+            MostrarForm(pacienteForm);
+        }
+
+        private void buttonPlanos_Click(object sender, EventArgs e)
+        {
+            BotaoAtivo(buttonPlanos);
+            var planoForm = new PlanoListagemForm();
+            MostrarForm(planoForm);
+        }
+
+        private void buttonMedicos_Click(object sender, EventArgs e)
+        {
+            BotaoAtivo(buttonMedicos);
+            var medicoForm = new MedicoListagemForm();
+            MostrarForm(medicoForm);
+        }
+
+        private void buttonExames2_Click(object sender, EventArgs e)
+        {
+            BotaoAtivo(buttonExames2);
+            var exameForm = new ExameListagemForm();
+            MostrarForm(exameForm);
+>>>>>>> 95d384d9a8db8ed9acdeeb21d4a5a0bfbee16fec
         }
     }
 }
