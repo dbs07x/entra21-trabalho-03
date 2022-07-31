@@ -102,7 +102,8 @@ WHERE e.id = @ID";
 
             var comando = conexao.CreateCommand();
 
-            comando.CommandText = @"SELECTe.id, 
+            comando.CommandText = @"SELECT
+e.id, 
 e.nome, 
 e.preco, 
 e.instrucoes, 
