@@ -133,6 +133,9 @@
   <data name="medico" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\medico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="botao-de-menu-de-tres-linhas-horizontais" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\botao-de-menu-de-tres-linhas-horizontais.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="prancheta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\prancheta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -163,13 +166,16 @@
   <data name="adicionar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\adicionar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="faixa-etaria" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\faixa-etaria.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="sneezing" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\sneezing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo_unimed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\logo_unimed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="botao-de-menu-de-tres-linhas-horizontais" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\botao-de-menu-de-tres-linhas-horizontais.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="faixa-etaria (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\faixa-etaria (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
