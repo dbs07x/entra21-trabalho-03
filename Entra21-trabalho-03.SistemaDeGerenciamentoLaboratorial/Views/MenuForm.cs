@@ -1,4 +1,5 @@
 ﻿using Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Agendamentos;
+using Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Exames;
 using Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Medicos;
 using Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Pacientes;
 using Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Planos;
@@ -116,6 +117,13 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views
             BotaoAtivo(buttonMedicos);
             var medicoForm = new MedicoListagemForm();
             MostrarForm(medicoForm);
+        }
+
+        private void buttonExames2_Click(object sender, EventArgs e)
+        {
+            BotaoAtivo(buttonExames2);
+            var exameForm = new ExameListagemForm();
+            MostrarForm(exameForm);
         }
     }
 }

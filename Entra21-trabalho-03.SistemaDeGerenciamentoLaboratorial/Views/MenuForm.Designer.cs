@@ -40,6 +40,7 @@
             this.buttonPlanos = new System.Windows.Forms.Button();
             this.buttonAgendamentos = new System.Windows.Forms.Button();
             this.buttonExames = new System.Windows.Forms.Button();
+            this.buttonExames2 = new System.Windows.Forms.Button();
             this.panelForm = new System.Windows.Forms.Panel();
             this.timerSidebar = new System.Windows.Forms.Timer(this.components);
             this.flowLayoutPanelPrincipal.SuspendLayout();
@@ -59,6 +60,7 @@
             this.flowLayoutPanelPrincipal.Controls.Add(this.buttonPlanos);
             this.flowLayoutPanelPrincipal.Controls.Add(this.buttonAgendamentos);
             this.flowLayoutPanelPrincipal.Controls.Add(this.buttonExames);
+            this.flowLayoutPanelPrincipal.Controls.Add(this.buttonExames2);
             this.flowLayoutPanelPrincipal.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanelPrincipal.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanelPrincipal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -258,6 +260,28 @@
             this.buttonExames.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonExames.UseVisualStyleBackColor = true;
             // 
+            // buttonExames2
+            // 
+            this.buttonExames2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonExames2.FlatAppearance.BorderSize = 0;
+            this.buttonExames2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(90)))));
+            this.buttonExames2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExames2.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonExames2.ForeColor = System.Drawing.Color.Black;
+            this.buttonExames2.Image = global::Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Properties.Resources.teste_de_sangue;
+            this.buttonExames2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonExames2.Location = new System.Drawing.Point(3, 465);
+            this.buttonExames2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonExames2.Name = "buttonExames2";
+            this.buttonExames2.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.buttonExames2.Size = new System.Drawing.Size(285, 63);
+            this.buttonExames2.TabIndex = 7;
+            this.buttonExames2.Text = "       Exames";
+            this.buttonExames2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonExames2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonExames2.UseVisualStyleBackColor = true;
+            this.buttonExames2.Click += new System.EventHandler(this.buttonExames2_Click);
+            // 
             // panelForm
             // 
             this.panelForm.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -305,5 +329,6 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBoxMenu;
         private System.Windows.Forms.Timer timerSidebar;
+        private Button buttonExames2;
     }
 }
