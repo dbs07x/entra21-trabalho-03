@@ -4,7 +4,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Services
 {
     internal interface IExameService
     {
-        List<Exame> ObterTodos();
+        List<Exame> ObterTodosFiltrando(string examePesquisa);
         Exame ObterPorId(int id);
         void Cadastrar(Exame exame);
         void Editar(Exame exame);
