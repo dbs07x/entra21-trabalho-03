@@ -128,6 +128,5 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Medicos
         {
             PreencherDataGridView();
         }
-
     }
 }

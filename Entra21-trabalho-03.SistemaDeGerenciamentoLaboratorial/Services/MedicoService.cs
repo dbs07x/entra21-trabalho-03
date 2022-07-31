@@ -28,7 +28,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Services
 
             comando.CommandText = "INSERT INTO medicos (nome, data_nascimento, cpf, crm, uf, telefone, email) VALUES (@NOME, @DATA_NASCIMENTO, @CPF, @CRM, @UF, @TELEFONE, @EMAIL);";
             comando.Parameters.AddWithValue("@NOME", medico.Nome);
-            //comando.Parameters.AddWithValue("@DATA_NASCIMENTO", medico.DataNascimento);
+            comando.Parameters.AddWithValue("@DATA_NASCIMENTO", medico.DataNascimento);
             comando.Parameters.AddWithValue("@CPF", medico.Cpf);
             comando.Parameters.AddWithValue("@CRM", medico.Crm);
             comando.Parameters.AddWithValue("@UF", medico.Uf);
@@ -46,9 +46,10 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Services
 
             var comando = conexao.CreateCommand();
 
-            comando.CommandText =@"UPDATE medicos
-SET nome = @NOME, data_nascimento = @DATA_NASCIMENTO, cpf = @CPF, crm = @CRM, uf = @UF, telefone = @TELEFONE, email = @EMAIL
+            comando.CommandText =@"UPDATE medicos 
+SET nome = @NOME, data_nascimento = @DATA_NASCIMENTO, cpf = @CPF, crm = @CRM, uf = @UF, telefone = @TELEFONE, email = @EMAIL 
 WHERE id = @ID";
+            comando.Parameters.AddWithValue("@ID", medico.Id);
             comando.Parameters.AddWithValue("@NOME", medico.Nome);
             comando.Parameters.AddWithValue("@DATA_NASCIMENTO", medico.DataNascimento);
             comando.Parameters.AddWithValue("@CPF", medico.Cpf);
@@ -56,7 +57,6 @@ WHERE id = @ID";
             comando.Parameters.AddWithValue("@UF", medico.Uf);
             comando.Parameters.AddWithValue("@TELEFONE", medico.Telefone);
             comando.Parameters.AddWithValue("@EMAIL", medico.Email);
-            comando.Parameters.AddWithValue("@ID", medico.Id);
 
             comando.ExecuteNonQuery();
 
@@ -80,6 +80,7 @@ FROM medicos WHERE id = @ID";
 
             var medico = new Medico();
 
+            medico.Id = Convert.ToInt32(registro["id"]);
             medico.Nome = registro["nome"].ToString();
             medico.DataNascimento = Convert.ToDateTime(registro["data_nascimento"]);
             medico.Cpf = registro["cpf"].ToString();

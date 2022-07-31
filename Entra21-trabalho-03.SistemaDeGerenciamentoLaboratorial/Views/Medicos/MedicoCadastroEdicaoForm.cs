@@ -37,10 +37,10 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Medicos
         {
             var nome = textBoxNome.Text.Trim();
             var dataNascimento = Convert.ToDateTime(dateTimePickerDataNascimento.Value.Date.ToString("dd/MM/yyyy"));
-            var cpf = maskedTextBoxCpf.Text.Trim();
+            var cpf = maskedTextBoxCpf.Text.Trim().Replace(",", string.Empty).Replace("-", string.Empty);
             var crm = textBoxCrm.Text.Trim();
             var uf = textBoxUf.Text.Trim();
-            var telefone = maskedTextBoxTelefone.Text.Trim();
+            var telefone = maskedTextBoxTelefone.Text.Trim().Replace("(", string.Empty).Replace(")", string.Empty).Replace("-", string.Empty);
             var email = textBoxEmail.Text.Trim();
 
             if (ValidarInformacoes() == false)
@@ -64,7 +64,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Medicos
             }
             catch (SqlException)
             {
-                MessageBox.Show("Não foi possível salvar o médico");
+                MessageBox.Show("Não foi possível salvar o registro");
             }
         }
 

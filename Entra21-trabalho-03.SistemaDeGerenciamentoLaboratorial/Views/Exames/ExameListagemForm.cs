@@ -18,9 +18,9 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Exames
 
         private void PreencherDataGridView()
         {
-            var nomePesquisa = textBoxNome.Text.Trim();
+            var examePesquisa = textBoxNome.Text.Trim();
 
-            var exames = _exameService.ObterTodosFiltrando(nomePesquisa);
+            var exames = _exameService.ObterTodosFiltrando(examePesquisa);
 
             dataGridView1.Rows.Clear();
 
@@ -34,8 +34,8 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Exames
                     exame.Id,
                     exame.Nome,
                     exame.Preco,
-                    exame.Medico.Nome,
-                    exame.Instrucoes
+                    exame.Instrucoes,
+                    exame.Medico.Nome
                 });
             }
         }

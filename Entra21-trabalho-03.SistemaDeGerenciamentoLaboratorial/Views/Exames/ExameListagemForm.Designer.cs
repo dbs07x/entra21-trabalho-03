@@ -36,12 +36,12 @@
             this.buttonPesquisar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBoxNome = new System.Windows.Forms.TextBox();
             this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnInstrucoes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnMedico = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBoxNome = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -158,6 +158,17 @@
             this.dataGridView1.Size = new System.Drawing.Size(851, 302);
             this.dataGridView1.TabIndex = 0;
             // 
+            // textBoxNome
+            // 
+            this.textBoxNome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxNome.Location = new System.Drawing.Point(113, 28);
+            this.textBoxNome.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxNome.Name = "textBoxNome";
+            this.textBoxNome.Size = new System.Drawing.Size(330, 23);
+            this.textBoxNome.TabIndex = 13;
+            // 
             // ColumnId
             // 
             this.ColumnId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -180,7 +191,7 @@
             // 
             this.ColumnPreco.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ColumnPreco.FillWeight = 79.76604F;
-            this.ColumnPreco.HeaderText = "Preço";
+            this.ColumnPreco.HeaderText = "Preço (R$)";
             this.ColumnPreco.MinimumWidth = 10;
             this.ColumnPreco.Name = "ColumnPreco";
             this.ColumnPreco.ReadOnly = true;
@@ -189,7 +200,7 @@
             // 
             this.ColumnInstrucoes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ColumnInstrucoes.FillWeight = 112.9943F;
-            this.ColumnInstrucoes.HeaderText = "Intruções";
+            this.ColumnInstrucoes.HeaderText = "Instruções";
             this.ColumnInstrucoes.MinimumWidth = 30;
             this.ColumnInstrucoes.Name = "ColumnInstrucoes";
             this.ColumnInstrucoes.ReadOnly = true;
@@ -201,17 +212,6 @@
             this.ColumnMedico.MinimumWidth = 20;
             this.ColumnMedico.Name = "ColumnMedico";
             this.ColumnMedico.ReadOnly = true;
-            // 
-            // textBoxNome
-            // 
-            this.textBoxNome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxNome.Location = new System.Drawing.Point(113, 28);
-            this.textBoxNome.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(330, 23);
-            this.textBoxNome.TabIndex = 13;
             // 
             // ExameListagemForm
             // 

@@ -231,7 +231,7 @@
             // 
             this.maskedTextBoxTelefone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.maskedTextBoxTelefone.Location = new System.Drawing.Point(263, 169);
-            this.maskedTextBoxTelefone.Mask = "(00)0 0000-0000";
+            this.maskedTextBoxTelefone.Mask = "(00)00000-0000";
             this.maskedTextBoxTelefone.Name = "maskedTextBoxTelefone";
             this.maskedTextBoxTelefone.Size = new System.Drawing.Size(134, 23);
             this.maskedTextBoxTelefone.TabIndex = 54;
