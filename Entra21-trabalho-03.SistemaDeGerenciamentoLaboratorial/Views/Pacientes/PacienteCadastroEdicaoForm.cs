@@ -54,7 +54,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Pacientes
         private void PreencherComboBoxTipoPlano()
         {
             var planoService = new PlanoService();
-            var planos = planoService.ObterTodos();
+            var planos = planoService.ObterTodosFiltrando("");
 
             for (int i = 0; i < planos.Count; i++) 
             {

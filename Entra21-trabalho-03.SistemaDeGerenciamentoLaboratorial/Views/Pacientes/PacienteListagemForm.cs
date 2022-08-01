@@ -17,9 +17,11 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Pacientes
 
         }
 
-        private void PreencherDataGridViewComPacientes() {
+        private void PreencherDataGridViewComPacientes()
+        {
+            var nomePesquisa = textBoxNomeFiltrar.Text;
 
-            var pacientes = _pacienteService.ObterTodos();
+            var pacientes = _pacienteService.ObterTodosFiltrando(nomePesquisa);
 
             dataGridView1.Rows.Clear();
 
@@ -64,7 +66,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Pacientes
 
         private void buttonPesquisar_Click(object sender, EventArgs e)
         {
-
+            PreencherDataGridViewComPacientes();
         }
 
         private void buttonCadastrar_Click_1(object sender, EventArgs e)
@@ -131,4 +133,5 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Pacientes
 
             }
         }
+    }
 }

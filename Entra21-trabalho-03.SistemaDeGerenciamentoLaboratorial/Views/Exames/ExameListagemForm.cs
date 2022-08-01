@@ -1,5 +1,6 @@
 ﻿using Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Services;
 using System.Data.SqlClient;
+using System.Globalization;
 
 namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Exames
 {
@@ -24,6 +25,11 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Exames
 
             dataGridView1.Rows.Clear();
 
+            var cultura = new CultureInfo("pt-BR");
+            cultura.NumberFormat.NumberDecimalSeparator = ",";
+            cultura.NumberFormat.CurrencyGroupSeparator = ".";
+            cultura.NumberFormat.NumberDecimalDigits = 2;
+
             for (int i = 0; i < exames.Count; i++)
             {
                 var exame = exames[i];
@@ -33,7 +39,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Exames
 
                     exame.Id,
                     exame.Nome,
-                    exame.Preco,
+                    string.Format(cultura, "R$ {0:N}", exame.Preco),
                     exame.Instrucoes,
                     exame.Medico.Nome
                 });

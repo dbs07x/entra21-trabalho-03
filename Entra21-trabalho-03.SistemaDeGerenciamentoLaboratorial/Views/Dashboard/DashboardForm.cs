@@ -22,7 +22,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views
         public double ObterMediaPacientes()
         {
             var pacienteService = new PacienteService();
-            var pacientes = pacienteService.ObterTodos();
+            var pacientes = pacienteService.ObterTodosFiltrando("");
             var indice = 0;
             var soma = 0.0;
 

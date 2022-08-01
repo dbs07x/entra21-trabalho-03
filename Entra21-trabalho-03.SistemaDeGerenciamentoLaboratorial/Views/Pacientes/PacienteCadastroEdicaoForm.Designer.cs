@@ -183,15 +183,6 @@
             this.buttonSalvar.Text = "SALVAR";
             this.buttonSalvar.UseVisualStyleBackColor = false;
             this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
-            this.buttonCadastrar.Location = new System.Drawing.Point(275, 397);
-            this.buttonCadastrar.Location = new System.Drawing.Point(434, 57);
-            this.buttonCadastrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonCadastrar.Name = "buttonCadastrar";
-            this.buttonCadastrar.Size = new System.Drawing.Size(86, 31);
-            this.buttonCadastrar.TabIndex = 12;
-            this.buttonCadastrar.Text = "Cadastrar";
-            this.buttonCadastrar.UseVisualStyleBackColor = true;
-            this.buttonCadastrar.Click += new System.EventHandler(this.buttonCadastrar_Click);
             // 
             // buttonCancelar
             // 
