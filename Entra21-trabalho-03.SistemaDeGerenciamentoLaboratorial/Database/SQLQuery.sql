@@ -26,7 +26,7 @@ CREATE TABLE medicos (
 	cpf VARCHAR(11),
 	crm VARCHAR(6),
 	uf VARCHAR(2),
-	telefone VARCHAR(9),
+	telefone VARCHAR(11),
 	email VARCHAR(30));
 
 	SELECT * FROM medicos
