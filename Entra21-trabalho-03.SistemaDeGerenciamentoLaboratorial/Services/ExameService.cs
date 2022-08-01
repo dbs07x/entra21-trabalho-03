@@ -64,15 +64,17 @@ WHERE id = @ID;";
 
             var comando = conexao.CreateCommand();
 
-            comando.CommandText = @"SELECT
+            comando.CommandText = @"SELECT 
 e.id,
 e.nome,
 e.preco,
 e.instrucoes,
 e.id_medico,
-m.nome AS nome_medico
+m.nome AS 'nome_medico'
 FROM exames AS e
-INNER JOIN medicos AS m ON(e.id_medico = m.id);";
+INNER JOIN medicos AS m ON(e.id_medico = m.id)
+WHERE e.id = @ID";
+            comando.Parameters.AddWithValue("@ID", id);
 
             var tabelaEmMemoria = new DataTable();
             tabelaEmMemoria.Load(comando.ExecuteReader());
@@ -107,7 +109,7 @@ e.nome,
 e.preco, 
 e.instrucoes, 
 e.id_medico,
-m.nome AS nome_medico
+m.nome AS 'nome_medico'
 FROM exames AS e
 INNER JOIN medicos AS m ON(e.id_medico = m.id)
 WHERE e.nome LIKE @EXAMEPESQUISA";
@@ -131,6 +133,7 @@ WHERE e.nome LIKE @EXAMEPESQUISA";
 
                 exame.Medico = new Medico();
                 exame.Medico.Id = Convert.ToInt32(registro["id_medico"]);
+                exame.Medico.Nome = registro["nome_medico"].ToString();
 
                 exames.Add(exame);
             }
