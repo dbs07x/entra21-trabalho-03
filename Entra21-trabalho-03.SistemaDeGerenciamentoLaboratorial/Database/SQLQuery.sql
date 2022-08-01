@@ -43,7 +43,6 @@ CREATE TABLE medicos (
 
 	FOREIGN KEY(id_plano) REFERENCES planos(id));
 
-
 	SELECT * FROM pacientes
 
 	CREATE TABLE exames (
