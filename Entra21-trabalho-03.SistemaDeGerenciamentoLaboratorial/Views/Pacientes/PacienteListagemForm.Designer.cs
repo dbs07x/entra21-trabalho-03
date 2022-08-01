@@ -30,12 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PacienteListagemForm));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDataNascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTelefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBoxNomeFiltrar = new System.Windows.Forms.TextBox();
             this.buttonApagar = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
@@ -43,6 +37,12 @@
             this.buttonPesquisar = new System.Windows.Forms.Button();
             this.labelFiltro = new System.Windows.Forms.Label();
             this.labelNome = new System.Windows.Forms.Label();
+            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDataNascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTelefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,63 +58,15 @@
             this.ColumnCpf,
             this.ColumnTelefone,
             this.ColumnEmail});
-            this.dataGridView1.Location = new System.Drawing.Point(49, 187);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 187);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(912, 468);
+            this.dataGridView1.Size = new System.Drawing.Size(1120, 468);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // ColumnId
-            // 
-            this.ColumnId.HeaderText = "ID";
-            this.ColumnId.MinimumWidth = 6;
-            this.ColumnId.Name = "ColumnId";
-            this.ColumnId.ReadOnly = true;
-            this.ColumnId.Width = 125;
-            // 
-            // ColumnNome
-            // 
-            this.ColumnNome.HeaderText = "Nome";
-            this.ColumnNome.MinimumWidth = 6;
-            this.ColumnNome.Name = "ColumnNome";
-            this.ColumnNome.ReadOnly = true;
-            this.ColumnNome.Width = 125;
-            // 
-            // ColumnDataNascimento
-            // 
-            this.ColumnDataNascimento.HeaderText = "DataNascimento";
-            this.ColumnDataNascimento.MinimumWidth = 6;
-            this.ColumnDataNascimento.Name = "ColumnDataNascimento";
-            this.ColumnDataNascimento.ReadOnly = true;
-            this.ColumnDataNascimento.Width = 125;
-            // 
-            // ColumnCpf
-            // 
-            this.ColumnCpf.HeaderText = "CPF";
-            this.ColumnCpf.MinimumWidth = 6;
-            this.ColumnCpf.Name = "ColumnCpf";
-            this.ColumnCpf.ReadOnly = true;
-            this.ColumnCpf.Width = 125;
-            // 
-            // ColumnTelefone
-            // 
-            this.ColumnTelefone.HeaderText = "Telefone";
-            this.ColumnTelefone.MinimumWidth = 6;
-            this.ColumnTelefone.Name = "ColumnTelefone";
-            this.ColumnTelefone.ReadOnly = true;
-            this.ColumnTelefone.Width = 125;
-            // 
-            // ColumnEmail
-            // 
-            this.ColumnEmail.HeaderText = "Email";
-            this.ColumnEmail.MinimumWidth = 6;
-            this.ColumnEmail.Name = "ColumnEmail";
-            this.ColumnEmail.ReadOnly = true;
-            this.ColumnEmail.Width = 125;
             // 
             // textBoxNomeFiltrar
             // 
@@ -132,7 +84,7 @@
             this.buttonApagar.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonApagar.ForeColor = System.Drawing.Color.White;
             this.buttonApagar.Image = ((System.Drawing.Image)(resources.GetObject("buttonApagar.Image")));
-            this.buttonApagar.Location = new System.Drawing.Point(877, 15);
+            this.buttonApagar.Location = new System.Drawing.Point(1015, 15);
             this.buttonApagar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonApagar.Name = "buttonApagar";
             this.buttonApagar.Size = new System.Drawing.Size(113, 136);
@@ -148,7 +100,7 @@
             this.buttonEditar.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonEditar.ForeColor = System.Drawing.Color.White;
             this.buttonEditar.Image = ((System.Drawing.Image)(resources.GetObject("buttonEditar.Image")));
-            this.buttonEditar.Location = new System.Drawing.Point(759, 15);
+            this.buttonEditar.Location = new System.Drawing.Point(897, 15);
             this.buttonEditar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonEditar.Name = "buttonEditar";
             this.buttonEditar.Size = new System.Drawing.Size(113, 136);
@@ -165,7 +117,7 @@
             this.buttonCadastrar.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonCadastrar.ForeColor = System.Drawing.Color.White;
             this.buttonCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCadastrar.Image")));
-            this.buttonCadastrar.Location = new System.Drawing.Point(641, 15);
+            this.buttonCadastrar.Location = new System.Drawing.Point(779, 15);
             this.buttonCadastrar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonCadastrar.Name = "buttonCadastrar";
             this.buttonCadastrar.Size = new System.Drawing.Size(113, 136);
@@ -179,7 +131,7 @@
             this.buttonPesquisar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(211)))), ((int)(((byte)(75)))));
             this.buttonPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("buttonPesquisar.Image")));
-            this.buttonPesquisar.Location = new System.Drawing.Point(490, 45);
+            this.buttonPesquisar.Location = new System.Drawing.Point(628, 45);
             this.buttonPesquisar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonPesquisar.Name = "buttonPesquisar";
             this.buttonPesquisar.Size = new System.Drawing.Size(97, 81);
@@ -215,11 +167,65 @@
             this.labelNome.TabIndex = 22;
             this.labelNome.Text = "Nome:";
             // 
+            // ColumnId
+            // 
+            this.ColumnId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnId.FillWeight = 64.17112F;
+            this.ColumnId.HeaderText = "ID";
+            this.ColumnId.MinimumWidth = 6;
+            this.ColumnId.Name = "ColumnId";
+            this.ColumnId.ReadOnly = true;
+            // 
+            // ColumnNome
+            // 
+            this.ColumnNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnNome.FillWeight = 107.1658F;
+            this.ColumnNome.HeaderText = "Nome";
+            this.ColumnNome.MinimumWidth = 6;
+            this.ColumnNome.Name = "ColumnNome";
+            this.ColumnNome.ReadOnly = true;
+            // 
+            // ColumnDataNascimento
+            // 
+            this.ColumnDataNascimento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnDataNascimento.FillWeight = 107.1658F;
+            this.ColumnDataNascimento.HeaderText = "Data Nascimento";
+            this.ColumnDataNascimento.MinimumWidth = 6;
+            this.ColumnDataNascimento.Name = "ColumnDataNascimento";
+            this.ColumnDataNascimento.ReadOnly = true;
+            // 
+            // ColumnCpf
+            // 
+            this.ColumnCpf.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnCpf.FillWeight = 107.1658F;
+            this.ColumnCpf.HeaderText = "CPF";
+            this.ColumnCpf.MinimumWidth = 6;
+            this.ColumnCpf.Name = "ColumnCpf";
+            this.ColumnCpf.ReadOnly = true;
+            // 
+            // ColumnTelefone
+            // 
+            this.ColumnTelefone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnTelefone.FillWeight = 107.1658F;
+            this.ColumnTelefone.HeaderText = "Telefone";
+            this.ColumnTelefone.MinimumWidth = 6;
+            this.ColumnTelefone.Name = "ColumnTelefone";
+            this.ColumnTelefone.ReadOnly = true;
+            // 
+            // ColumnEmail
+            // 
+            this.ColumnEmail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnEmail.FillWeight = 107.1658F;
+            this.ColumnEmail.HeaderText = "Email";
+            this.ColumnEmail.MinimumWidth = 6;
+            this.ColumnEmail.Name = "ColumnEmail";
+            this.ColumnEmail.ReadOnly = true;
+            // 
             // PacienteListagemForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1002, 671);
+            this.ClientSize = new System.Drawing.Size(1140, 671);
             this.Controls.Add(this.labelNome);
             this.Controls.Add(this.labelFiltro);
             this.Controls.Add(this.buttonPesquisar);
@@ -240,12 +246,6 @@
         #endregion
 
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn ColumnId;
-        private DataGridViewTextBoxColumn ColumnNome;
-        private DataGridViewTextBoxColumn ColumnDataNascimento;
-        private DataGridViewTextBoxColumn ColumnCpf;
-        private DataGridViewTextBoxColumn ColumnTelefone;
-        private DataGridViewTextBoxColumn ColumnEmail;
         private TextBox textBoxNomeFiltrar;
         private Button buttonApagar;
         private Button buttonEditar;
@@ -253,5 +253,11 @@
         private Button buttonPesquisar;
         private Label labelFiltro;
         private Label labelNome;
+        private DataGridViewTextBoxColumn ColumnId;
+        private DataGridViewTextBoxColumn ColumnNome;
+        private DataGridViewTextBoxColumn ColumnDataNascimento;
+        private DataGridViewTextBoxColumn ColumnCpf;
+        private DataGridViewTextBoxColumn ColumnTelefone;
+        private DataGridViewTextBoxColumn ColumnEmail;
     }
 }

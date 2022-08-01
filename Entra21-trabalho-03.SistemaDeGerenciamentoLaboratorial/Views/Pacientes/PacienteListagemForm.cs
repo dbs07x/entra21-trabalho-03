@@ -66,7 +66,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Pacientes
 
         private void buttonPesquisar_Click(object sender, EventArgs e)
         {
-
+            PreencherDataGridViewComPacientes();
         }
 
         private void buttonCadastrar_Click_1(object sender, EventArgs e)

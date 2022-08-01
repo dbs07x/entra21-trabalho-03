@@ -28,7 +28,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Planos
 
         private void PreencherDataGridViewComPlanos()
         {
-            var planoPesquisa = textBox1.Text;
+            var planoPesquisa = textBoxFiltro.Text;
 
             var planos = _planoService.ObterTodosFiltrando(planoPesquisa);
 
@@ -143,6 +143,11 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Planos
 
 
             }
+        }
+
+        private void buttonPesquisar_Click(object sender, EventArgs e)
+        {
+            PreencherDataGridViewComPlanos();
         }
     }
 }

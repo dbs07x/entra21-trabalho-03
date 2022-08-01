@@ -43,10 +43,13 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Services
             var conexao = new Conexao().Conectar();
 
             var comando = conexao.CreateCommand();
-            comando.CommandText = "@UPDATE planos SET id = @ID," +
-                "nome = @NOME, abrangencia= @ABRANGENCIA, acomodacao = @ACOMODACAO, " +
-                "coparticipacao = @COPARTICIPACAO, preco = @PRECO";
-
+            comando.CommandText = @"UPDATE planos SET 
+nome = @NOME,
+abrangencia = @ABRANGENCIA,
+acomodacao = @ACOMODACAO,
+coparticipacao = @COPARTICIPACAO,
+preco = @PRECO
+WHERE id = @ID";
 
             comando.Parameters.AddWithValue("@ID", plano.Id);
             comando.Parameters.AddWithValue("@NOME", plano.Nome);
@@ -76,6 +79,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Services
 
             var plano = new Plano();
 
+            plano.Id = Convert.ToInt32(registro["id"]);
             plano.Nome = registro["nome"].ToString();
             plano.Abrangencia = registro["abrangencia"].ToString();
             plano.Acomodacao = registro["acomodacao"].ToString();

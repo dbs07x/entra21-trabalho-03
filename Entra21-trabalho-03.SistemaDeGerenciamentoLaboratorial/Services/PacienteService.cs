@@ -126,8 +126,11 @@ p.id_plano,
 pl.nome AS 'nome_plano',
 pl.coparticipacao AS 'coparticipacao'
 FROM pacientes AS p
-INNER JOIN planos AS pl ON(p.id_plano = pl.id)";
-            
+INNER JOIN planos AS pl ON(p.id_plano = pl.id)
+WHERE p.nome LIKE @NOMEPESQUISA;";
+            comando.Parameters.AddWithValue("@NOMEPESQUISA", $"%{pacientePesquisa}%");
+
+
             var tabelaEmMemoria = new DataTable();
             
             tabelaEmMemoria.Load(comando.ExecuteReader());
