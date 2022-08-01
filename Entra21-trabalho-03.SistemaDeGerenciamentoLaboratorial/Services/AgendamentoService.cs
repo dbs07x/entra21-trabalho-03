@@ -81,7 +81,10 @@ INNER JOIN pacientes AS p ON(a.id_paciente = p.id)
 INNER JOIN exames AS e ON(a.id_exame = e.id)
 INNER JOIN unidades AS u ON(a.id_unidade = u.id)
 INNER JOIN planos AS pla ON(p.id_plano = pla.id)
-INNER JOIN medicos AS m ON(e.id_medico = m.id);";
+INNER JOIN medicos AS m ON(e.id_medico = m.id)
+WHERE a.id = @ID;";
+
+            comando.Parameters.AddWithValue("@ID", id);
 
             var tabelaEmMemoria = new DataTable();
             tabelaEmMemoria.Load(comando.ExecuteReader());

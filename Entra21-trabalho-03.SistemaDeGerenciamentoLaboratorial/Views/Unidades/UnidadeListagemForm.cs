@@ -114,7 +114,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Unidades
             {
                 _unidadeService.Apagar(idRegistro);
 
-                MessageBox.Show("Cliente apagado com sucesso");
+                MessageBox.Show("Unidade apagado com sucesso");
 
                 PreencherDataGridView();
             }

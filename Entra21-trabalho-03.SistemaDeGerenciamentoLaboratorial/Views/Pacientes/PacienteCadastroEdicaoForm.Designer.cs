@@ -183,6 +183,15 @@
             this.buttonSalvar.Text = "SALVAR";
             this.buttonSalvar.UseVisualStyleBackColor = false;
             this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
+            this.buttonCadastrar.Location = new System.Drawing.Point(275, 397);
+            this.buttonCadastrar.Location = new System.Drawing.Point(434, 57);
+            this.buttonCadastrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonCadastrar.Name = "buttonCadastrar";
+            this.buttonCadastrar.Size = new System.Drawing.Size(86, 31);
+            this.buttonCadastrar.TabIndex = 12;
+            this.buttonCadastrar.Text = "Cadastrar";
+            this.buttonCadastrar.UseVisualStyleBackColor = true;
+            this.buttonCadastrar.Click += new System.EventHandler(this.buttonCadastrar_Click);
             // 
             // buttonCancelar
             // 
@@ -195,6 +204,9 @@
             this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCancelar.Location = new System.Drawing.Point(196, 286);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonCancelar.Location = new System.Drawing.Point(367, 397);
+            this.buttonCancelar.Location = new System.Drawing.Point(449, 113);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
             this.buttonCancelar.Size = new System.Drawing.Size(172, 46);

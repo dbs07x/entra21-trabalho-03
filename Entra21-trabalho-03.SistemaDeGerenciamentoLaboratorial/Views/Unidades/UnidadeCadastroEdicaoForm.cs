@@ -65,9 +65,9 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Unidades
                 unidade.Uf = uf;
 
                 if (_idParaEditar == modoCadastro)
-                    CadastrarCliente(unidade);
+                    CadastrarUnidade(unidade);
                 else
-                    EditarCliente(unidade);
+                    EditarUnidade(unidade);
             }
             catch (SqlException)
             {
@@ -75,22 +75,22 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Unidades
             }
         }
 
-        private void EditarCliente(Unidade unidade)
+        private void EditarUnidade(Unidade unidade)
         {
             unidade.Id = _idParaEditar;
 
             _unidadeService.Editar(unidade);
 
-            MessageBox.Show("Cliente editado com sucesso");
+            MessageBox.Show("Unidade editado com sucesso");
 
             Close();
         }
 
-        private void CadastrarCliente(Unidade unidade)
+        private void CadastrarUnidade(Unidade unidade)
         {
             _unidadeService.Cadastrar(unidade);
 
-            MessageBox.Show("Cliente cadastrado com sucesso");
+            MessageBox.Show("Unidade cadastrado com sucesso");
 
             Close();
         }

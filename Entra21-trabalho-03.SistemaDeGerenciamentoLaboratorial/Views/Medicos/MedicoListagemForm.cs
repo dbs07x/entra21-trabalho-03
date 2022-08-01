@@ -41,7 +41,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Medicos
 
                     medico.Id,
                     medico.Nome,
-                    medico.DataNascimento,
+                    medico.DataNascimento.ToString("dd/MM/yyyy"),
                     medico.Cpf.Substring(0, 3) + "." + medico.Cpf.Substring(3, 3) + "." + medico.Cpf.Substring(6, 3) + "-" + medico.Cpf.Substring(9, 2),
                     medico.Crm,
                     medico.Uf,

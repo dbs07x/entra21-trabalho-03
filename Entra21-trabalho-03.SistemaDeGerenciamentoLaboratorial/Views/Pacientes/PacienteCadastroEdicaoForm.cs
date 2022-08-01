@@ -114,6 +114,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Pacientes
                 pacienteService.Cadastrar(paciente);
 
                 MessageBox.Show("Paciente cadastrado com sucesso");
+                Close();
             }
             else
             {
