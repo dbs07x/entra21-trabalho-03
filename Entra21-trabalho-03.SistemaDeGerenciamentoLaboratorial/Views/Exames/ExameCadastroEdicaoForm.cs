@@ -27,7 +27,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Exames
             _idParaEditar = exame.Id;
 
             textBoxNome.Text = exame.Nome;
-            //textBoxPreco.Text = Convert.ToDecimal(exame.Preco);
+            textBoxPreco.Text = exame.Preco.ToString();
             textBoxInstrucoes.Text = exame.Instrucoes;
 
             for (int i = 0; i < comboBoxMedico.Items.Count; i++)
@@ -46,7 +46,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Exames
         {
             var exame = new Exame();
             exame.Nome = textBoxNome.Text.Trim();
-            //exame.Preco = textBoxPreco.Text.Trim();
+            exame.Preco = Convert.ToDouble(textBoxPreco.Text.Trim());
             exame.Medico = comboBoxMedico.SelectedItem as Medico;
             exame.Instrucoes = textBoxInstrucoes.Text.Trim();
 

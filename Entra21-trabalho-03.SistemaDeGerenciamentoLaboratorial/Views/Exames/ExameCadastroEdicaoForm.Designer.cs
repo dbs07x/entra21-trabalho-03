@@ -101,6 +101,7 @@
             // 
             // comboBoxMedico
             // 
+            this.comboBoxMedico.DisplayMember = "Nome";
             this.comboBoxMedico.FormattingEnabled = true;
             this.comboBoxMedico.Location = new System.Drawing.Point(214, 135);
             this.comboBoxMedico.Name = "comboBoxMedico";
