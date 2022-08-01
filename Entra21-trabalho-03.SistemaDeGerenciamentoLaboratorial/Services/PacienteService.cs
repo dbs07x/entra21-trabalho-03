@@ -13,7 +13,6 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Services
             var comando = conexao.CreateCommand();
             comando.CommandText = "DELETE FROM pacientes WHERE id = @ID";
 
-
             comando.Parameters.AddWithValue("@ID", id);
 
             comando.ExecuteNonQuery();
@@ -110,7 +109,7 @@ WHERE p.id = @ID";
             return paciente;
         }
 
-        public List<Paciente> ObterTodos()
+        public List<Paciente> ObterTodosFiltrando(string pacientePesquisa)
         {
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();

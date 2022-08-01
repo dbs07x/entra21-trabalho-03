@@ -73,5 +73,50 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Planos
         {
             Close();
         }
+
+        private void buttonCadastrar_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonSalvar_Click(object sender, EventArgs e)
+        {
+            var nome = textBoxNome.Text.Trim();
+            var abrangencia = textBoxAbrangencia.Text.Trim();
+            var acomodacao = textBoxAcomodacao.Text.Trim();
+            var coparticipacao = textBoxCoparticipacao.Text.Trim();
+            var preco = textBoxPreco.Text.Trim();
+
+            var plano = new Plano();
+            plano.Nome = nome;
+            plano.Coparticipacao = Convert.ToDecimal(coparticipacao);
+            plano.Preco = Convert.ToDecimal(preco);
+            plano.Abrangencia = abrangencia;
+            plano.Acomodacao = acomodacao;
+
+
+            var planoService = new PlanoService();
+
+            if (_idParaEditar == -1)
+            {
+                planoService.Cadastrar(plano);
+                MessageBox.Show("Plano cadastrado com sucesso", "Aviso", MessageBoxButtons.OK);
+                Close();
+            }
+            else
+            {
+                plano.Id = _idParaEditar;
+                planoService.Editar(plano);
+
+                MessageBox.Show("Plano alterado com sucesso");
+                Close();
+
+            }
+        }
+
+        private void buttonCancelar_Click_1(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

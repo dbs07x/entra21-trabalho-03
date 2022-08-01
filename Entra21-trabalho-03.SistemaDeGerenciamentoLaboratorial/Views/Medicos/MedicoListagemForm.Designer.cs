@@ -84,7 +84,6 @@
             this.buttonPesquisar.Size = new System.Drawing.Size(94, 70);
             this.buttonPesquisar.TabIndex = 18;
             this.buttonPesquisar.UseVisualStyleBackColor = false;
-            this.buttonPesquisar.Click += new System.EventHandler(this.buttonPesquisar_Click);
             // 
             // labelFiltro
             // 
@@ -115,7 +114,6 @@
             this.buttonApagar.Size = new System.Drawing.Size(99, 102);
             this.buttonApagar.TabIndex = 16;
             this.buttonApagar.UseVisualStyleBackColor = false;
-            this.buttonApagar.Click += new System.EventHandler(this.buttonApagar_Click);
             // 
             // buttonEditar
             // 
@@ -132,7 +130,6 @@
             this.buttonEditar.TabIndex = 15;
             this.buttonEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonEditar.UseVisualStyleBackColor = false;
-            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // buttonCadastrar
             // 

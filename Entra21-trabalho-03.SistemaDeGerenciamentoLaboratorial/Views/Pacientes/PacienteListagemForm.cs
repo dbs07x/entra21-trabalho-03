@@ -54,9 +54,32 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Pacientes
 
         private void buttonEditar_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void buttonApagar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonPesquisar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonCadastrar_Click_1(object sender, EventArgs e)
+        {
+            var pacienteForm = new PacienteCadastroEdicaoForm();
+            pacienteForm.ShowDialog();
+
+            PreencherDataGridViewComPacientes();
+        }
+
+        private void buttonEditar_Click_1(object sender, EventArgs e)
+        {
             if (dataGridView1.SelectedRows.Count == 0)
-            { 
-            MessageBox.Show("Selecione um paciente para editar","Aviso", MessageBoxButtons.OK);
+            {
+                MessageBox.Show("Selecione um paciente para editar", "Aviso", MessageBoxButtons.OK);
                 return;
             }
 
@@ -68,14 +91,14 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Pacientes
 
             var pacienteCadastroForm = new PacienteCadastroEdicaoForm(paciente);
 
-           pacienteCadastroForm.ShowDialog();
+            pacienteCadastroForm.ShowDialog();
 
             PreencherDataGridViewComPacientes();
         }
 
-        private void buttonApagar_Click(object sender, EventArgs e)
+        private void buttonApagar_Click_1(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count == 0) 
+            if (dataGridView1.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Selecione um paciente para apagar!", "Aviso", MessageBoxButtons.OK);
                 return;
@@ -101,11 +124,11 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Pacientes
 
                     MessageBox.Show("Paciente removido com sucesso!", "Aviso", MessageBoxButtons.OK);
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show("Não foi possível apagar o registro, provavelmente porque está sendo usado em um agendamento");
                 }
+
             }
         }
-    }
 }

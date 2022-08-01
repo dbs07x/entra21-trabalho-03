@@ -72,7 +72,27 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Pacientes
 
         private void buttonCadastrar_Click(object sender, EventArgs e)
         {
-            if (comboBoxPlano.SelectedIndex == -1) 
+
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void textBoxNome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void maskedTextBoxTelefone_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void buttonSalvar_Click(object sender, EventArgs e)
+        {
+            if (comboBoxPlano.SelectedIndex == -1)
             {
                 MessageBox.Show("Selecione um plano");
                 return;
@@ -95,17 +115,17 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Pacientes
 
                 MessageBox.Show("Paciente cadastrado com sucesso");
             }
-            else 
+            else
             {
                 paciente.Id = _idParaEditar;
                 pacienteService.Editar(paciente);
 
                 MessageBox.Show("Paciente alterado com sucesso");
-                Close();                     
+                Close();
             }
         }
 
-        private void buttonCancelar_Click(object sender, EventArgs e)
+        private void buttonCancelar_Click_1(object sender, EventArgs e)
         {
             Close();
         }

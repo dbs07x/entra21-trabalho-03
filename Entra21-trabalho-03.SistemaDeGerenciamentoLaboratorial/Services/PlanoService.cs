@@ -33,7 +33,6 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Services
             comando.Parameters.AddWithValue("@COPARTICIPACAO", plano.Coparticipacao / 100);
             comando.Parameters.AddWithValue("@PRECO", plano.Preco);
 
-
             comando.ExecuteNonQuery();
 
             comando.Connection.Close();
@@ -88,7 +87,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Services
             return plano;
         }
 
-        public List<Plano> ObterTodos()
+        public List<Plano> ObterTodosFiltrando(string planoPesquisa)
         {
 
             var conexao = new Conexao().Conectar();
@@ -101,7 +100,9 @@ p.acomodacao AS 'acomodacao',
 p.abrangencia AS 'abrangencia',
 p.coparticipacao AS 'coparticipacao',
 p.preco AS 'preco'
-FROM planos AS p"; 
+FROM planos AS p
+WHERE nome LIKE @NOME";
+            comando.Parameters.AddWithValue("@NOME", $"{planoPesquisa}%");
 
             var dataTable = new DataTable();
             dataTable.Load(comando.ExecuteReader());

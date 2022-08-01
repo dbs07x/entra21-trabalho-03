@@ -28,7 +28,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Planos
 
         private void PreencherDataGridViewComPlanos()
         {
-            var planos = _planoService.ObterTodos();
+            var planos = _planoService.ObterTodosFiltrando();
 
             dataGridView1.Rows.Clear();
 
@@ -60,10 +60,58 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Planos
 
         private void buttonApagar_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonCadastrar_Click(object sender, EventArgs e)
+        {
+            var planoForm = new PlanoCadastroEdicaoForm();
+            planoForm.ShowDialog();
+
+            PreencherDataGridViewComPlanos();
+        }
+
+        private void buttonCadastrar_Click_1(object sender, EventArgs e)
+        {
+            var planoForm = new PlanoCadastroEdicaoForm();
+            planoForm.ShowDialog();
+
+            PreencherDataGridViewComPlanos();
+
+        }
+
+        private void buttonEditar_Click_1(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione um plano para editar", "Aviso", MessageBoxButtons.OK);
+                return;
+            }
+            var linhaSelecionada = dataGridView1.SelectedRows[0];
+
+            var id = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+
+            var plano = _planoService.ObterPorId(id);
+            var planoCadastroForm = new PlanoCadastroEdicaoForm(plano);
+
+            planoCadastroForm.ShowDialog();
+
+            PreencherDataGridViewComPlanos();
+
+
+        }
+
+        private void buttonApagar_Click_1(object sender, EventArgs e)
+        {
             if (dataGridView1.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Selecione um plano para apagar", "Aviso", MessageBoxButtons.OK);
-                return; 
+                return;
             }
 
             var resposta = MessageBox.Show("Deseja apagar o plano selecionado?", "Aviso", MessageBoxButtons.YesNo);
@@ -91,35 +139,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Planos
                     MessageBox.Show("Não foi possível apagar o plano, provavelmente pois um paciente está o utilizando");
                 }
 
-            
+
             }
         }
-
-        private void buttonEditar_Click(object sender, EventArgs e)
-        {
-            if (dataGridView1.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Selecione um plano para editar", "Aviso", MessageBoxButtons.OK);
-                return;
-            }
-            var linhaSelecionada = dataGridView1.SelectedRows[0];
-
-            var id = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
-
-            var plano = _planoService.ObterPorId(id);
-            var planoCadastroForm = new PlanoCadastroEdicaoForm(plano);
-
-            planoCadastroForm.ShowDialog();
-
-            PreencherDataGridViewComPlanos();
-        }
-
-        private void buttonCadastrar_Click(object sender, EventArgs e)
-        {
-            var planoForm = new PlanoCadastroEdicaoForm();
-            planoForm.ShowDialog();
-
-            PreencherDataGridViewComPlanos();
-        }
-    }
 }
