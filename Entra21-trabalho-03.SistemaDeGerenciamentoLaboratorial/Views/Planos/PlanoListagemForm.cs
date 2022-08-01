@@ -28,7 +28,9 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Planos
 
         private void PreencherDataGridViewComPlanos()
         {
-            var planos = _planoService.ObterTodosFiltrando();
+            var planoPesquisa = textBox1.Text;
+
+            var planos = _planoService.ObterTodosFiltrando(planoPesquisa);
 
             dataGridView1.Rows.Clear();
 
@@ -48,7 +50,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Planos
                    plano.Abrangencia,
                    plano.Acomodacao,
                    plano.Coparticipacao * 100 + "%",
-                   string.Format(cultura, "R$ {0:N}", plano.Preco)                   
+                   string.Format(cultura, "R$ {0:N}", plano.Preco)
                    });
             }
         }
@@ -142,4 +144,5 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Planos
 
             }
         }
+    }
 }

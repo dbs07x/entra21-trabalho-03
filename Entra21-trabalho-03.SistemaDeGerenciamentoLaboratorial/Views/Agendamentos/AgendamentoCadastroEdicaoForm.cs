@@ -102,7 +102,7 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Agendamen
         private void PreencherComBoxPaciente()
         {
             var pacienteService = new PacienteService();
-            var pacientes = pacienteService.ObterTodos();
+            var pacientes = pacienteService.ObterTodosFiltrando("");
 
             for (int i = 0; i < pacientes.Count; i++)
             {
