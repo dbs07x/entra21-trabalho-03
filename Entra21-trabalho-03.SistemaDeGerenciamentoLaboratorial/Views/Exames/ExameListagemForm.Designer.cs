@@ -155,6 +155,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(851, 302);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -191,7 +192,7 @@
             // 
             this.ColumnPreco.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ColumnPreco.FillWeight = 79.76604F;
-            this.ColumnPreco.HeaderText = "Preço (R$)";
+            this.ColumnPreco.HeaderText = "Preço";
             this.ColumnPreco.MinimumWidth = 10;
             this.ColumnPreco.Name = "ColumnPreco";
             this.ColumnPreco.ReadOnly = true;
