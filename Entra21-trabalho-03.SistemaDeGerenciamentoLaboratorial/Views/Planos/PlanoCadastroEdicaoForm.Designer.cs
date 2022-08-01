@@ -195,6 +195,7 @@
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.labelNome);
             this.Name = "PlanoCadastroEdicaoForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PlanoCadastroEdicaoForm";
             this.ResumeLayout(false);
             this.PerformLayout();

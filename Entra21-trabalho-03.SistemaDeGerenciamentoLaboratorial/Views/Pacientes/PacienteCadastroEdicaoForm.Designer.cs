@@ -44,6 +44,7 @@
             this.labelTitulo = new System.Windows.Forms.Label();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelNome
@@ -193,9 +194,6 @@
             this.buttonCancelar.ForeColor = System.Drawing.Color.Black;
             this.buttonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancelar.Image")));
             this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCancelar.Location = new System.Drawing.Point(196, 286);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonCancelar.Location = new System.Drawing.Point(367, 397);
             this.buttonCancelar.Location = new System.Drawing.Point(449, 113);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonCancelar.Name = "buttonCancelar";
@@ -206,11 +204,30 @@
             this.buttonCancelar.UseVisualStyleBackColor = false;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click_1);
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(93)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(225, 286);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(172, 46);
+            this.button1.TabIndex = 50;
+            this.button1.Text = "CANCELAR";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // PacienteCadastroEdicaoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(408, 366);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.labelTitulo);
@@ -227,6 +244,7 @@
             this.Controls.Add(this.labelNome);
             this.Controls.Add(this.comboBoxPlano);
             this.Name = "PacienteCadastroEdicaoForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PacienteCadastroEdicaoForm";
             this.Load += new System.EventHandler(this.PacienteCadastroEdicaoForm_Load);
             this.ResumeLayout(false);
@@ -253,5 +271,6 @@
         private Label labelTitulo;
         private Button buttonSalvar;
         private Button buttonCancelar;
+        private Button button1;
     }
 }

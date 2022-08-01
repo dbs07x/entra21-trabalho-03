@@ -145,9 +145,6 @@ namespace Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Views.Planos
             }
         }
 
-            }
-        }
-    }
         private void buttonPesquisar_Click(object sender, EventArgs e)
         {
             PreencherDataGridViewComPlanos();

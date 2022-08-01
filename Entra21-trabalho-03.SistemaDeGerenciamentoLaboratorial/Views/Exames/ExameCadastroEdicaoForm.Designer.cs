@@ -177,6 +177,7 @@
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.labelNome);
             this.Name = "ExameCadastroEdicaoForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ExameCadastroEdicaoForm";
             this.ResumeLayout(false);
             this.PerformLayout();

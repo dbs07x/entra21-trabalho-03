@@ -267,6 +267,7 @@
             this.Controls.Add(this.textBoxUf);
             this.Controls.Add(this.textBoxEmail);
             this.Name = "MedicoCadastroEdicaoForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MedicoCadastroEdicaoForm";
             this.ResumeLayout(false);
             this.PerformLayout();
