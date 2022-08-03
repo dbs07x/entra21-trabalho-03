@@ -32,7 +32,6 @@
             this.flowLayoutPanelPrincipal = new System.Windows.Forms.FlowLayoutPanel();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBoxMenu = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonDashboard = new System.Windows.Forms.Button();
             this.buttonUnidades = new System.Windows.Forms.Button();
             this.buttonMedicos = new System.Windows.Forms.Button();
@@ -46,12 +45,11 @@
             this.flowLayoutPanelPrincipal.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanelPrincipal
             // 
-            this.flowLayoutPanelPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(211)))), ((int)(((byte)(75)))));
+            this.flowLayoutPanelPrincipal.BackColor = System.Drawing.Color.Silver;
             this.flowLayoutPanelPrincipal.Controls.Add(this.panelLogo);
             this.flowLayoutPanelPrincipal.Controls.Add(this.buttonDashboard);
             this.flowLayoutPanelPrincipal.Controls.Add(this.buttonUnidades);
@@ -63,44 +61,35 @@
             this.flowLayoutPanelPrincipal.Controls.Add(this.buttonExames2);
             this.flowLayoutPanelPrincipal.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanelPrincipal.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanelPrincipal.MaximumSize = new System.Drawing.Size(319, 0);
-            this.flowLayoutPanelPrincipal.MinimumSize = new System.Drawing.Size(105, 0);
+            this.flowLayoutPanelPrincipal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.flowLayoutPanelPrincipal.MaximumSize = new System.Drawing.Size(279, 0);
+            this.flowLayoutPanelPrincipal.MinimumSize = new System.Drawing.Size(92, 0);
             this.flowLayoutPanelPrincipal.Name = "flowLayoutPanelPrincipal";
-            this.flowLayoutPanelPrincipal.Size = new System.Drawing.Size(319, 889);
+            this.flowLayoutPanelPrincipal.Size = new System.Drawing.Size(279, 667);
             this.flowLayoutPanelPrincipal.TabIndex = 0;
             // 
             // panelLogo
             // 
-            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(90)))));
+            this.panelLogo.BackColor = System.Drawing.Color.Gray;
             this.panelLogo.Controls.Add(this.pictureBoxMenu);
-            this.panelLogo.Controls.Add(this.pictureBox1);
-            this.panelLogo.Location = new System.Drawing.Point(3, 3);
+            this.panelLogo.Location = new System.Drawing.Point(3, 2);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(315, 77);
+            this.panelLogo.Size = new System.Drawing.Size(276, 58);
             this.panelLogo.TabIndex = 0;
             // 
             // pictureBoxMenu
             // 
             this.pictureBoxMenu.Image = global::Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Properties.Resources.botao_de_menu_de_tres_linhas_horizontais;
-            this.pictureBoxMenu.Location = new System.Drawing.Point(27, 19);
+            this.pictureBoxMenu.Location = new System.Drawing.Point(24, 14);
+            this.pictureBoxMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxMenu.Name = "pictureBoxMenu";
-            this.pictureBoxMenu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.pictureBoxMenu.Size = new System.Drawing.Size(55, 44);
+            this.pictureBoxMenu.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.pictureBoxMenu.Size = new System.Drawing.Size(48, 33);
             this.pictureBoxMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxMenu.TabIndex = 1;
             this.pictureBoxMenu.TabStop = false;
             this.pictureBoxMenu.Click += new System.EventHandler(this.pictureBoxMenu_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Properties.Resources.logo_unimed_atualizada;
-            this.pictureBox1.InitialImage = global::Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Properties.Resources.logo_unimed_atualizada;
-            this.pictureBox1.Location = new System.Drawing.Point(112, -3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(203, 79);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // buttonDashboard
             // 
@@ -109,14 +98,15 @@
             this.buttonDashboard.FlatAppearance.BorderSize = 0;
             this.buttonDashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(90)))));
             this.buttonDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDashboard.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonDashboard.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonDashboard.ForeColor = System.Drawing.Color.Black;
             this.buttonDashboard.Image = global::Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Properties.Resources.dashboard;
             this.buttonDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDashboard.Location = new System.Drawing.Point(3, 86);
+            this.buttonDashboard.Location = new System.Drawing.Point(3, 64);
+            this.buttonDashboard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonDashboard.Name = "buttonDashboard";
-            this.buttonDashboard.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonDashboard.Size = new System.Drawing.Size(326, 84);
+            this.buttonDashboard.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.buttonDashboard.Size = new System.Drawing.Size(285, 70);
             this.buttonDashboard.TabIndex = 0;
             this.buttonDashboard.Text = "       Dashboard";
             this.buttonDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -130,14 +120,15 @@
             this.buttonUnidades.FlatAppearance.BorderSize = 0;
             this.buttonUnidades.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(90)))));
             this.buttonUnidades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonUnidades.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonUnidades.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonUnidades.ForeColor = System.Drawing.Color.Black;
             this.buttonUnidades.Image = global::Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Properties.Resources.hospital__1_;
             this.buttonUnidades.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonUnidades.Location = new System.Drawing.Point(3, 176);
+            this.buttonUnidades.Location = new System.Drawing.Point(3, 138);
+            this.buttonUnidades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonUnidades.Name = "buttonUnidades";
-            this.buttonUnidades.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonUnidades.Size = new System.Drawing.Size(326, 84);
+            this.buttonUnidades.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.buttonUnidades.Size = new System.Drawing.Size(285, 70);
             this.buttonUnidades.TabIndex = 1;
             this.buttonUnidades.Text = "       Unidades";
             this.buttonUnidades.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -151,14 +142,15 @@
             this.buttonMedicos.FlatAppearance.BorderSize = 0;
             this.buttonMedicos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(90)))));
             this.buttonMedicos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMedicos.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonMedicos.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonMedicos.ForeColor = System.Drawing.Color.Black;
             this.buttonMedicos.Image = global::Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Properties.Resources.medico;
             this.buttonMedicos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonMedicos.Location = new System.Drawing.Point(3, 266);
+            this.buttonMedicos.Location = new System.Drawing.Point(3, 212);
+            this.buttonMedicos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonMedicos.Name = "buttonMedicos";
-            this.buttonMedicos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonMedicos.Size = new System.Drawing.Size(326, 77);
+            this.buttonMedicos.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.buttonMedicos.Size = new System.Drawing.Size(285, 70);
             this.buttonMedicos.TabIndex = 2;
             this.buttonMedicos.Text = "       Médicos";
             this.buttonMedicos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -171,14 +163,15 @@
             this.buttonPacientes.FlatAppearance.BorderSize = 0;
             this.buttonPacientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(90)))));
             this.buttonPacientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPacientes.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonPacientes.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonPacientes.ForeColor = System.Drawing.Color.Black;
             this.buttonPacientes.Image = global::Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Properties.Resources.sneezing;
             this.buttonPacientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonPacientes.Location = new System.Drawing.Point(3, 349);
+            this.buttonPacientes.Location = new System.Drawing.Point(3, 286);
+            this.buttonPacientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonPacientes.Name = "buttonPacientes";
-            this.buttonPacientes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonPacientes.Size = new System.Drawing.Size(326, 84);
+            this.buttonPacientes.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.buttonPacientes.Size = new System.Drawing.Size(285, 70);
             this.buttonPacientes.TabIndex = 3;
             this.buttonPacientes.Text = "       Pacientes";
             this.buttonPacientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -192,14 +185,15 @@
             this.buttonPlanos.FlatAppearance.BorderSize = 0;
             this.buttonPlanos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(90)))));
             this.buttonPlanos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPlanos.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonPlanos.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonPlanos.ForeColor = System.Drawing.Color.Black;
             this.buttonPlanos.Image = global::Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Properties.Resources.prancheta;
             this.buttonPlanos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonPlanos.Location = new System.Drawing.Point(3, 439);
+            this.buttonPlanos.Location = new System.Drawing.Point(3, 360);
+            this.buttonPlanos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonPlanos.Name = "buttonPlanos";
-            this.buttonPlanos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonPlanos.Size = new System.Drawing.Size(326, 84);
+            this.buttonPlanos.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.buttonPlanos.Size = new System.Drawing.Size(285, 70);
             this.buttonPlanos.TabIndex = 4;
             this.buttonPlanos.Text = "       Planos";
             this.buttonPlanos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -213,14 +207,15 @@
             this.buttonAgendamentos.FlatAppearance.BorderSize = 0;
             this.buttonAgendamentos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(90)))));
             this.buttonAgendamentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAgendamentos.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonAgendamentos.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonAgendamentos.ForeColor = System.Drawing.Color.Black;
             this.buttonAgendamentos.Image = global::Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Properties.Resources.calendario;
             this.buttonAgendamentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAgendamentos.Location = new System.Drawing.Point(3, 529);
+            this.buttonAgendamentos.Location = new System.Drawing.Point(3, 434);
+            this.buttonAgendamentos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAgendamentos.Name = "buttonAgendamentos";
-            this.buttonAgendamentos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonAgendamentos.Size = new System.Drawing.Size(326, 84);
+            this.buttonAgendamentos.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.buttonAgendamentos.Size = new System.Drawing.Size(285, 70);
             this.buttonAgendamentos.TabIndex = 5;
             this.buttonAgendamentos.Text = "       Agendamentos";
             this.buttonAgendamentos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -238,11 +233,12 @@
             this.buttonExames.ForeColor = System.Drawing.Color.Black;
             this.buttonExames.Image = global::Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Properties.Resources.prancheta;
             this.buttonExames.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonExames.Location = new System.Drawing.Point(3, 619);
-            this.buttonExames.MaximumSize = new System.Drawing.Size(326, 84);
+            this.buttonExames.Location = new System.Drawing.Point(3, 508);
+            this.buttonExames.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonExames.MaximumSize = new System.Drawing.Size(285, 63);
             this.buttonExames.Name = "buttonExames";
-            this.buttonExames.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonExames.Size = new System.Drawing.Size(326, 0);
+            this.buttonExames.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.buttonExames.Size = new System.Drawing.Size(285, 0);
             this.buttonExames.TabIndex = 6;
             this.buttonExames.Text = "       Exames";
             this.buttonExames.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -255,14 +251,15 @@
             this.buttonExames2.FlatAppearance.BorderSize = 0;
             this.buttonExames2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(90)))));
             this.buttonExames2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExames2.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonExames2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonExames2.ForeColor = System.Drawing.Color.Black;
             this.buttonExames2.Image = global::Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Properties.Resources.teste_de_sangue;
             this.buttonExames2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonExames2.Location = new System.Drawing.Point(3, 625);
+            this.buttonExames2.Location = new System.Drawing.Point(3, 512);
+            this.buttonExames2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonExames2.Name = "buttonExames2";
-            this.buttonExames2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonExames2.Size = new System.Drawing.Size(326, 84);
+            this.buttonExames2.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.buttonExames2.Size = new System.Drawing.Size(285, 70);
             this.buttonExames2.TabIndex = 7;
             this.buttonExames2.Text = "       Exames";
             this.buttonExames2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -272,10 +269,12 @@
             // 
             // panelForm
             // 
+            this.panelForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panelForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelForm.Location = new System.Drawing.Point(319, 0);
+            this.panelForm.Location = new System.Drawing.Point(279, 0);
+            this.panelForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelForm.Name = "panelForm";
-            this.panelForm.Size = new System.Drawing.Size(1387, 889);
+            this.panelForm.Size = new System.Drawing.Size(1214, 667);
             this.panelForm.TabIndex = 1;
             // 
             // timerSidebar
@@ -285,17 +284,17 @@
             // 
             // MenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1706, 889);
+            this.ClientSize = new System.Drawing.Size(1493, 667);
             this.Controls.Add(this.panelForm);
             this.Controls.Add(this.flowLayoutPanelPrincipal);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MenuForm";
             this.Text = "Sistema de gerenciamento laboratorial";
             this.flowLayoutPanelPrincipal.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -312,7 +311,6 @@
         private Button buttonAgendamentos;
         private Button buttonExames;
         private Panel panelForm;
-        private PictureBox pictureBox1;
         private PictureBox pictureBoxMenu;
         private System.Windows.Forms.Timer timerSidebar;
         private Button buttonExames2;
