@@ -106,7 +106,11 @@
             this.buttonDashboard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonDashboard.Name = "buttonDashboard";
             this.buttonDashboard.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+<<<<<<< HEAD
             this.buttonDashboard.Size = new System.Drawing.Size(285, 70);
+=======
+            this.buttonDashboard.Size = new System.Drawing.Size(285, 63);
+>>>>>>> Atualizado menu form
             this.buttonDashboard.TabIndex = 0;
             this.buttonDashboard.Text = "       Dashboard";
             this.buttonDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -124,11 +128,19 @@
             this.buttonUnidades.ForeColor = System.Drawing.Color.Black;
             this.buttonUnidades.Image = global::Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Properties.Resources.hospital__1_;
             this.buttonUnidades.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.buttonUnidades.Location = new System.Drawing.Point(3, 138);
             this.buttonUnidades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonUnidades.Name = "buttonUnidades";
             this.buttonUnidades.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
             this.buttonUnidades.Size = new System.Drawing.Size(285, 70);
+=======
+            this.buttonUnidades.Location = new System.Drawing.Point(3, 131);
+            this.buttonUnidades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonUnidades.Name = "buttonUnidades";
+            this.buttonUnidades.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.buttonUnidades.Size = new System.Drawing.Size(285, 63);
+>>>>>>> Atualizado menu form
             this.buttonUnidades.TabIndex = 1;
             this.buttonUnidades.Text = "       Unidades";
             this.buttonUnidades.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -146,11 +158,19 @@
             this.buttonMedicos.ForeColor = System.Drawing.Color.Black;
             this.buttonMedicos.Image = global::Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Properties.Resources.medico;
             this.buttonMedicos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.buttonMedicos.Location = new System.Drawing.Point(3, 212);
             this.buttonMedicos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonMedicos.Name = "buttonMedicos";
             this.buttonMedicos.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
             this.buttonMedicos.Size = new System.Drawing.Size(285, 70);
+=======
+            this.buttonMedicos.Location = new System.Drawing.Point(3, 198);
+            this.buttonMedicos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonMedicos.Name = "buttonMedicos";
+            this.buttonMedicos.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.buttonMedicos.Size = new System.Drawing.Size(285, 58);
+>>>>>>> Atualizado menu form
             this.buttonMedicos.TabIndex = 2;
             this.buttonMedicos.Text = "       Médicos";
             this.buttonMedicos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -167,11 +187,19 @@
             this.buttonPacientes.ForeColor = System.Drawing.Color.Black;
             this.buttonPacientes.Image = global::Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Properties.Resources.sneezing;
             this.buttonPacientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.buttonPacientes.Location = new System.Drawing.Point(3, 286);
             this.buttonPacientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonPacientes.Name = "buttonPacientes";
             this.buttonPacientes.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
             this.buttonPacientes.Size = new System.Drawing.Size(285, 70);
+=======
+            this.buttonPacientes.Location = new System.Drawing.Point(3, 260);
+            this.buttonPacientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonPacientes.Name = "buttonPacientes";
+            this.buttonPacientes.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.buttonPacientes.Size = new System.Drawing.Size(285, 63);
+>>>>>>> Atualizado menu form
             this.buttonPacientes.TabIndex = 3;
             this.buttonPacientes.Text = "       Pacientes";
             this.buttonPacientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -189,11 +217,19 @@
             this.buttonPlanos.ForeColor = System.Drawing.Color.Black;
             this.buttonPlanos.Image = global::Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Properties.Resources.prancheta;
             this.buttonPlanos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.buttonPlanos.Location = new System.Drawing.Point(3, 360);
             this.buttonPlanos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonPlanos.Name = "buttonPlanos";
             this.buttonPlanos.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
             this.buttonPlanos.Size = new System.Drawing.Size(285, 70);
+=======
+            this.buttonPlanos.Location = new System.Drawing.Point(3, 327);
+            this.buttonPlanos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonPlanos.Name = "buttonPlanos";
+            this.buttonPlanos.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.buttonPlanos.Size = new System.Drawing.Size(285, 63);
+>>>>>>> Atualizado menu form
             this.buttonPlanos.TabIndex = 4;
             this.buttonPlanos.Text = "       Planos";
             this.buttonPlanos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -211,11 +247,19 @@
             this.buttonAgendamentos.ForeColor = System.Drawing.Color.Black;
             this.buttonAgendamentos.Image = global::Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Properties.Resources.calendario;
             this.buttonAgendamentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.buttonAgendamentos.Location = new System.Drawing.Point(3, 434);
             this.buttonAgendamentos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAgendamentos.Name = "buttonAgendamentos";
             this.buttonAgendamentos.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
             this.buttonAgendamentos.Size = new System.Drawing.Size(285, 70);
+=======
+            this.buttonAgendamentos.Location = new System.Drawing.Point(3, 394);
+            this.buttonAgendamentos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonAgendamentos.Name = "buttonAgendamentos";
+            this.buttonAgendamentos.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.buttonAgendamentos.Size = new System.Drawing.Size(285, 63);
+>>>>>>> Atualizado menu form
             this.buttonAgendamentos.TabIndex = 5;
             this.buttonAgendamentos.Text = "       Agendamentos";
             this.buttonAgendamentos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -233,7 +277,11 @@
             this.buttonExames.ForeColor = System.Drawing.Color.Black;
             this.buttonExames.Image = global::Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Properties.Resources.prancheta;
             this.buttonExames.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.buttonExames.Location = new System.Drawing.Point(3, 508);
+=======
+            this.buttonExames.Location = new System.Drawing.Point(3, 461);
+>>>>>>> Atualizado menu form
             this.buttonExames.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonExames.MaximumSize = new System.Drawing.Size(285, 63);
             this.buttonExames.Name = "buttonExames";
@@ -255,11 +303,19 @@
             this.buttonExames2.ForeColor = System.Drawing.Color.Black;
             this.buttonExames2.Image = global::Entra21_trabalho_03.SistemaDeGerenciamentoLaboratorial.Properties.Resources.teste_de_sangue;
             this.buttonExames2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.buttonExames2.Location = new System.Drawing.Point(3, 512);
             this.buttonExames2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonExames2.Name = "buttonExames2";
             this.buttonExames2.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
             this.buttonExames2.Size = new System.Drawing.Size(285, 70);
+=======
+            this.buttonExames2.Location = new System.Drawing.Point(3, 465);
+            this.buttonExames2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonExames2.Name = "buttonExames2";
+            this.buttonExames2.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.buttonExames2.Size = new System.Drawing.Size(285, 63);
+>>>>>>> Atualizado menu form
             this.buttonExames2.TabIndex = 7;
             this.buttonExames2.Text = "       Exames";
             this.buttonExames2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
