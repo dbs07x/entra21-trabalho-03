@@ -76,7 +76,7 @@
             // buttonPesquisar
             // 
             this.buttonPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonPesquisar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(211)))), ((int)(((byte)(75)))));
+            this.buttonPesquisar.BackColor = System.Drawing.Color.Silver;
             this.buttonPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("buttonPesquisar.Image")));
             this.buttonPesquisar.Location = new System.Drawing.Point(547, 11);
@@ -91,9 +91,9 @@
             this.labelFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.labelFiltro.AutoSize = true;
-            this.labelFiltro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
+            this.labelFiltro.BackColor = System.Drawing.Color.Transparent;
             this.labelFiltro.Font = new System.Drawing.Font("Constantia", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelFiltro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(93)))));
+            this.labelFiltro.ForeColor = System.Drawing.Color.Black;
             this.labelFiltro.Location = new System.Drawing.Point(10, 11);
             this.labelFiltro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelFiltro.Name = "labelFiltro";
@@ -104,7 +104,7 @@
             // buttonApagar
             // 
             this.buttonApagar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonApagar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(93)))));
+            this.buttonApagar.BackColor = System.Drawing.Color.Silver;
             this.buttonApagar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonApagar.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonApagar.ForeColor = System.Drawing.Color.White;
@@ -119,7 +119,7 @@
             // buttonEditar
             // 
             this.buttonEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(93)))));
+            this.buttonEditar.BackColor = System.Drawing.Color.Silver;
             this.buttonEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonEditar.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonEditar.ForeColor = System.Drawing.Color.White;
@@ -135,7 +135,7 @@
             // buttonCadastrar
             // 
             this.buttonCadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(93)))));
+            this.buttonCadastrar.BackColor = System.Drawing.Color.Silver;
             this.buttonCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonCadastrar.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonCadastrar.ForeColor = System.Drawing.Color.White;
